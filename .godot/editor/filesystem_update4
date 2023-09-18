@@ -1,0 +1,5 @@
+res://game_scenes/test_scene.tscn
+res://game/characters/archer.tscn
+res://game/characters/player.tscn
+res://scripts/player_movement.gd
+res://scripts/CameraRig.gd
