@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://c05gwlrdwmivr"]
+
+[ext_resource type="ArrayMesh" uid="uid://cjq6fodm8516t" path="res://addons/kaykit_dungeon_remastered/Assets/obj/floor_tile_small_broken_A.obj" id="1_b02y7"]
+[ext_resource type="Texture2D" uid="uid://n83aod1bjgiy" path="res://addons/kaykit_dungeon_remastered/Assets/gltf/floor_tile_small_broken_A_dungeon_texture.png" id="1_n2l35"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fcqbw"]
+albedo_texture = ExtResource("1_n2l35")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vy0n5"]
+size = Vector3(2.00399, 0.148045, 2)
+
+[node name="floor_tile_small_broken_A" type="MeshInstance3D"]
+material_override = SubResource("StandardMaterial3D_fcqbw")
+mesh = ExtResource("1_b02y7")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0214041, 0)
+shape = SubResource("BoxShape3D_vy0n5")
