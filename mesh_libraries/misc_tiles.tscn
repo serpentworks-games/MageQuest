@@ -1,0 +1,236 @@
+[gd_scene load_steps=59 format=3 uid="uid://dmg85nwxunhli"]
+
+[ext_resource type="PackedScene" uid="uid://dcq4kjplbpv5n" path="res://addons/kaykit_dungeon_remastered/Assets/gltf/banner_blue.gltf.glb" id="1_7kru7"]
+[ext_resource type="PackedScene" uid="uid://cxo85jrh0bmeq" path="res://addons/kaykit_dungeon_remastered/Assets/gltf/banner_brown.gltf.glb" id="2_ej4rs"]
+[ext_resource type="PackedScene" uid="uid://4rrhqno2reyr" path="res://addons/kaykit_dungeon_remastered/Assets/gltf/banner_green.gltf.glb" id="3_muubv"]
+[ext_resource type="PackedScene" uid="uid://bk6ipxahq838s" path="res://addons/kaykit_dungeon_remastered/Assets/gltf/banner_patternA_blue.gltf.glb" id="4_iwgmx"]
+[ext_resource type="PackedScene" uid="uid://4uaib8bxyfuq" path="res://addons/kaykit_dungeon_remastered/Assets/gltf/banner_patternA_brown.gltf.glb" id="5_rtc4n"]
+[ext_resource type="PackedScene" uid="uid://chh34ymxy0o8f" path="res://addons/kaykit_dungeon_remastered/Assets/gltf/banner_patternA_green.gltf.glb" id="6_an5ng"]
+[ext_resource type="PackedScene" uid="uid://bx4vwog4y61r1" path="res://addons/kaykit_dungeon_remastered/Assets/gltf/banner_patternA_red.gltf.glb" id="7_tccpd"]
+[ext_resource type="PackedScene" uid="uid://csvd2nnua0ab" path="res://addons/kaykit_dungeon_remastered/Assets/gltf/banner_patternA_white.gltf.glb" id="8_oqnh3"]
+[ext_resource type="PackedScene" uid="uid://tkkv4bdd3f6j" path="res://addons/kaykit_dungeon_remastered/Assets/gltf/banner_patternA_yellow.gltf.glb" id="9_d7x5r"]
+[ext_resource type="PackedScene" uid="uid://djf1k2r0c2b46" path="res://addons/kaykit_dungeon_remastered/Assets/gltf/banner_patternB_blue.gltf.glb" id="10_7asr1"]
+[ext_resource type="PackedScene" uid="uid://bq7sxw0q78tad" path="res://addons/kaykit_dungeon_remastered/Assets/gltf/banner_patternB_brown.gltf.glb" id="11_i6dyc"]
+[ext_resource type="PackedScene" uid="uid://mfymcjif3bq" path="res://addons/kaykit_dungeon_remastered/Assets/gltf/banner_patternB_green.gltf.glb" id="12_vojgm"]
+[ext_resource type="PackedScene" uid="uid://bujnbn4nfgd65" path="res://addons/kaykit_dungeon_remastered/Assets/gltf/banner_patternB_red.gltf.glb" id="13_qc1vn"]
+[ext_resource type="PackedScene" uid="uid://bfy3hxmng1vl0" path="res://addons/kaykit_dungeon_remastered/Assets/gltf/banner_patternB_white.gltf.glb" id="14_8g1e0"]
+[ext_resource type="PackedScene" uid="uid://b1m6fja6bl2da" path="res://addons/kaykit_dungeon_remastered/Assets/gltf/banner_patternB_yellow.gltf.glb" id="15_a50a6"]
+[ext_resource type="PackedScene" uid="uid://4livsndtbke6" path="res://addons/kaykit_dungeon_remastered/Assets/gltf/banner_patternC_blue.gltf.glb" id="16_nxbcb"]
+[ext_resource type="PackedScene" uid="uid://drrldg6w3khq2" path="res://addons/kaykit_dungeon_remastered/Assets/gltf/banner_patternC_brown.gltf.glb" id="17_fyomt"]
+[ext_resource type="PackedScene" uid="uid://cvpg84v7y8par" path="res://addons/kaykit_dungeon_remastered/Assets/gltf/banner_patternC_green.gltf.glb" id="18_yml1c"]
+[ext_resource type="PackedScene" uid="uid://brn45g3hlrayg" path="res://addons/kaykit_dungeon_remastered/Assets/gltf/banner_patternC_red.gltf.glb" id="19_wb88u"]
+[ext_resource type="PackedScene" uid="uid://b3sbxp7b0cdfq" path="res://addons/kaykit_dungeon_remastered/Assets/gltf/banner_patternC_white.gltf.glb" id="20_3cq5q"]
+[ext_resource type="PackedScene" uid="uid://bjye1njwl1a7d" path="res://addons/kaykit_dungeon_remastered/Assets/gltf/banner_patternC_yellow.gltf.glb" id="21_ldwyg"]
+[ext_resource type="PackedScene" uid="uid://c62nytv6dryqs" path="res://addons/kaykit_dungeon_remastered/Assets/gltf/banner_red.gltf.glb" id="22_6ehco"]
+[ext_resource type="PackedScene" uid="uid://b5mymybsrwpw3" path="res://addons/kaykit_dungeon_remastered/Assets/gltf/banner_shield_blue.gltf.glb" id="23_80s3l"]
+[ext_resource type="PackedScene" uid="uid://0oypncfstn3s" path="res://addons/kaykit_dungeon_remastered/Assets/gltf/banner_shield_brown.gltf.glb" id="24_x06ga"]
+[ext_resource type="PackedScene" uid="uid://bejwqc2drem7g" path="res://addons/kaykit_dungeon_remastered/Assets/gltf/banner_shield_green.gltf.glb" id="25_1a8jy"]
+[ext_resource type="PackedScene" uid="uid://b0fcgd2jyxcrc" path="res://addons/kaykit_dungeon_remastered/Assets/gltf/banner_shield_red.gltf.glb" id="26_1khyi"]
+[ext_resource type="PackedScene" uid="uid://cdsaw3xmm0d32" path="res://addons/kaykit_dungeon_remastered/Assets/gltf/banner_shield_white.gltf.glb" id="27_14ddt"]
+[ext_resource type="PackedScene" uid="uid://ca6jqatt58e52" path="res://addons/kaykit_dungeon_remastered/Assets/gltf/banner_shield_yellow.gltf.glb" id="28_ksecn"]
+[ext_resource type="PackedScene" uid="uid://bnveyvb63ougw" path="res://addons/kaykit_dungeon_remastered/Assets/gltf/banner_thin_blue.gltf.glb" id="29_tuent"]
+[ext_resource type="PackedScene" uid="uid://cd8w04myklvki" path="res://addons/kaykit_dungeon_remastered/Assets/gltf/banner_thin_brown.gltf.glb" id="30_75asa"]
+[ext_resource type="PackedScene" uid="uid://ccyv5aifh06aj" path="res://addons/kaykit_dungeon_remastered/Assets/gltf/banner_thin_green.gltf.glb" id="31_h0dyj"]
+[ext_resource type="PackedScene" uid="uid://clifo4nsv5fiq" path="res://addons/kaykit_dungeon_remastered/Assets/gltf/banner_thin_red.gltf.glb" id="32_5ixdd"]
+[ext_resource type="PackedScene" uid="uid://xblw64g7ppas" path="res://addons/kaykit_dungeon_remastered/Assets/gltf/banner_thin_white.gltf.glb" id="33_4khtf"]
+[ext_resource type="PackedScene" uid="uid://du852qbib46kw" path="res://addons/kaykit_dungeon_remastered/Assets/gltf/banner_thin_yellow.gltf.glb" id="34_dv48r"]
+[ext_resource type="PackedScene" uid="uid://cns8nbqtavfdk" path="res://addons/kaykit_dungeon_remastered/Assets/gltf/banner_triple_blue.gltf.glb" id="35_mgvbh"]
+[ext_resource type="PackedScene" uid="uid://dd0jut3o7ywr8" path="res://addons/kaykit_dungeon_remastered/Assets/gltf/banner_triple_brown.gltf.glb" id="36_emsbk"]
+[ext_resource type="PackedScene" uid="uid://dg1f0s3nrg3sg" path="res://addons/kaykit_dungeon_remastered/Assets/gltf/banner_triple_green.gltf.glb" id="37_818j2"]
+[ext_resource type="PackedScene" uid="uid://dje757c08svjg" path="res://addons/kaykit_dungeon_remastered/Assets/gltf/banner_triple_red.gltf.glb" id="38_o3oya"]
+[ext_resource type="PackedScene" uid="uid://c3rcg7428tclx" path="res://addons/kaykit_dungeon_remastered/Assets/gltf/banner_triple_white.gltf.glb" id="39_nhp5p"]
+[ext_resource type="PackedScene" uid="uid://doot2jtv10ng7" path="res://addons/kaykit_dungeon_remastered/Assets/gltf/banner_triple_yellow.gltf.glb" id="40_uofgd"]
+[ext_resource type="PackedScene" uid="uid://c05jgjs8i3veq" path="res://addons/kaykit_dungeon_remastered/Assets/gltf/banner_white.gltf.glb" id="41_if51j"]
+[ext_resource type="PackedScene" uid="uid://c2y0rrsusohog" path="res://addons/kaykit_dungeon_remastered/Assets/gltf/banner_yellow.gltf.glb" id="42_5f7c3"]
+[ext_resource type="PackedScene" uid="uid://b4f47gh38bg4e" path="res://addons/kaykit_dungeon_remastered/Assets/gltf/barrel_large.gltf.glb" id="43_ca7cs"]
+[ext_resource type="PackedScene" uid="uid://cms7plk6xncqx" path="res://addons/kaykit_dungeon_remastered/Assets/gltf/barrel_large_decorated.gltf.glb" id="44_rpv16"]
+[ext_resource type="PackedScene" uid="uid://bow4n7d44d6db" path="res://addons/kaykit_dungeon_remastered/Assets/gltf/barrel_small.gltf.glb" id="45_m2qps"]
+[ext_resource type="PackedScene" uid="uid://c0g45qkbho8c" path="res://addons/kaykit_dungeon_remastered/Assets/gltf/barrel_small_stack.gltf.glb" id="46_1lv0n"]
+[ext_resource type="PackedScene" uid="uid://b4ou4mgm3bj2g" path="res://addons/kaykit_dungeon_remastered/Assets/gltf/barrier.gltf.glb" id="47_e2v66"]
+[ext_resource type="PackedScene" uid="uid://wm0rtnjecio" path="res://addons/kaykit_dungeon_remastered/Assets/gltf/barrier_column.gltf.glb" id="48_cvvtq"]
+[ext_resource type="PackedScene" uid="uid://dmyrbylh0s7r6" path="res://addons/kaykit_dungeon_remastered/Assets/gltf/barrier_colum_half.gltf.glb" id="49_utgtq"]
+[ext_resource type="PackedScene" uid="uid://bgdn07xlr3hdq" path="res://addons/kaykit_dungeon_remastered/Assets/gltf/barrier_corner.gltf.glb" id="50_a467r"]
+[ext_resource type="PackedScene" uid="uid://cyo6mx2rt7miy" path="res://addons/kaykit_dungeon_remastered/Assets/gltf/barrier_half.gltf.glb" id="51_ki3v1"]
+[ext_resource type="PackedScene" uid="uid://bx34x5jr86n3o" path="res://addons/kaykit_dungeon_remastered/Assets/gltf/bed_decorated.gltf.glb" id="52_xqdx1"]
+[ext_resource type="PackedScene" uid="uid://bgu7igalp5omk" path="res://addons/kaykit_dungeon_remastered/Assets/gltf/bed_floor.gltf.glb" id="53_cfacl"]
+[ext_resource type="PackedScene" uid="uid://7n4w2ep4wo48" path="res://addons/kaykit_dungeon_remastered/Assets/gltf/box_large.gltf.glb" id="54_iubvn"]
+[ext_resource type="PackedScene" uid="uid://hw12smie7vs1" path="res://addons/kaykit_dungeon_remastered/Assets/gltf/bed_frame.gltf.glb" id="55_e1sad"]
+[ext_resource type="PackedScene" uid="uid://7swj1t1k4o2p" path="res://addons/kaykit_dungeon_remastered/Assets/gltf/box_small.gltf.glb" id="56_6juah"]
+[ext_resource type="PackedScene" uid="uid://blhcmwixi0s38" path="res://addons/kaykit_dungeon_remastered/Assets/gltf/box_small_decorated.gltf.glb" id="57_quqpu"]
+[ext_resource type="PackedScene" uid="uid://dtcbx7nvc54ca" path="res://addons/kaykit_dungeon_remastered/Assets/gltf/box_stacked.gltf.glb" id="58_m3iw2"]
+
+[node name="MiscTiles" type="Node3D"]
+
+[node name="banner_blue_gltf" parent="." instance=ExtResource("1_7kru7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -0.5)
+
+[node name="banner_brown_gltf" parent="." instance=ExtResource("2_ej4rs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0, -0.5)
+
+[node name="banner_green_gltf" parent="." instance=ExtResource("3_muubv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -0.5)
+
+[node name="banner_patternA_blue_gltf" parent="." instance=ExtResource("4_iwgmx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5, 0, -0.5)
+
+[node name="banner_patternA_brown_gltf" parent="." instance=ExtResource("5_rtc4n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -0.5)
+
+[node name="banner_patternA_green_gltf" parent="." instance=ExtResource("6_an5ng")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.5, 0, -0.5)
+
+[node name="banner_patternA_red_gltf" parent="." instance=ExtResource("7_tccpd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, -0.5)
+
+[node name="banner_patternA_white_gltf" parent="." instance=ExtResource("8_oqnh3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5, 0, -0.5)
+
+[node name="banner_patternA_yellow_gltf" parent="." instance=ExtResource("9_d7x5r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, -0.5)
+
+[node name="banner_patternB_blue_gltf" parent="." instance=ExtResource("10_7asr1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.5, 0, -0.5)
+
+[node name="banner_patternB_brown_gltf" parent="." instance=ExtResource("11_i6dyc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, -0.5)
+
+[node name="banner_patternB_green_gltf" parent="." instance=ExtResource("12_vojgm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.5, 0, -0.5)
+
+[node name="banner_patternB_red_gltf" parent="." instance=ExtResource("13_qc1vn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19, 0, -0.5)
+
+[node name="banner_patternB_white_gltf" parent="." instance=ExtResource("14_8g1e0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.5, 0, -0.5)
+
+[node name="banner_patternB_yellow_gltf" parent="." instance=ExtResource("15_a50a6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 0, -0.5)
+
+[node name="banner_patternC_blue_gltf" parent="." instance=ExtResource("16_nxbcb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.5, 0, -0.5)
+
+[node name="banner_patternC_brown_gltf" parent="." instance=ExtResource("17_fyomt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25, 0, -0.5)
+
+[node name="banner_patternC_green_gltf" parent="." instance=ExtResource("18_yml1c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.5, 0, -0.5)
+
+[node name="banner_patternC_red_gltf" parent="." instance=ExtResource("19_wb88u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28, 0, -0.5)
+
+[node name="banner_patternC_white_gltf" parent="." instance=ExtResource("20_3cq5q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.5, 0, -0.5)
+
+[node name="banner_patternC_yellow_gltf" parent="." instance=ExtResource("21_ldwyg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31, 0, -0.5)
+
+[node name="banner_red_gltf" parent="." instance=ExtResource("22_6ehco")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.5, 0, -0.5)
+
+[node name="banner_shield_blue_gltf" parent="." instance=ExtResource("23_80s3l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0.5)
+
+[node name="banner_shield_brown_gltf" parent="." instance=ExtResource("24_x06ga")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 0, 0.5)
+
+[node name="banner_shield_green_gltf" parent="." instance=ExtResource("25_1a8jy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 0.5)
+
+[node name="banner_shield_red_gltf" parent="." instance=ExtResource("26_1khyi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.5, 0, 0.5)
+
+[node name="banner_shield_white_gltf" parent="." instance=ExtResource("27_14ddt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, 0.5)
+
+[node name="banner_shield_yellow_gltf" parent="." instance=ExtResource("28_ksecn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5, 0, 0.5)
+
+[node name="banner_thin_blue_gltf" parent="." instance=ExtResource("29_tuent")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.5, 0, 0.5)
+
+[node name="banner_thin_brown_gltf" parent="." instance=ExtResource("30_75asa")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0, 0.5)
+
+[node name="banner_thin_green_gltf" parent="." instance=ExtResource("31_h0dyj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.5, 0, 0.5)
+
+[node name="banner_thin_red_gltf" parent="." instance=ExtResource("32_5ixdd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 0.5)
+
+[node name="banner_thin_white_gltf" parent="." instance=ExtResource("33_4khtf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.5, 0, 0.5)
+
+[node name="banner_thin_yellow_gltf" parent="." instance=ExtResource("34_dv48r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23, 0, 0.5)
+
+[node name="banner_triple_blue_gltf" parent="." instance=ExtResource("35_mgvbh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.5, 0, 0.5)
+
+[node name="banner_triple_brown_gltf" parent="." instance=ExtResource("36_emsbk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.5, 0, 0.5)
+
+[node name="banner_triple_green_gltf" parent="." instance=ExtResource("37_818j2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.5, 0, 0.5)
+
+[node name="banner_triple_red_gltf" parent="." instance=ExtResource("38_o3oya")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.5, 0, 0.5)
+
+[node name="banner_triple_white_gltf" parent="." instance=ExtResource("39_nhp5p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.5, 0, 0.5)
+
+[node name="banner_triple_yellow_gltf" parent="." instance=ExtResource("40_uofgd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45.5, 0, 0.5)
+
+[node name="banner_white_gltf" parent="." instance=ExtResource("41_if51j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34, 0, -0.5)
+
+[node name="banner_yellow_gltf" parent="." instance=ExtResource("42_5f7c3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35.5, 0, -0.5)
+
+[node name="barrel_large_gltf" parent="." instance=ExtResource("43_ca7cs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 2.5)
+
+[node name="barrel_large_decorated_gltf" parent="." instance=ExtResource("44_rpv16")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 0, 2.5)
+
+[node name="barrel_small_gltf" parent="." instance=ExtResource("45_m2qps")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 2.5)
+
+[node name="barrel_small_stack_gltf" parent="." instance=ExtResource("46_1lv0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 2.5)
+
+[node name="barrier_gltf" parent="." instance=ExtResource("47_e2v66")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5, 0, 2.5)
+
+[node name="barrier_column_gltf" parent="." instance=ExtResource("48_cvvtq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, 2.5)
+
+[node name="barrier_colum_half_gltf" parent="." instance=ExtResource("49_utgtq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.5, 0, 2.5)
+
+[node name="barrier_corner_gltf" parent="." instance=ExtResource("50_a467r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23, 0, 2.5)
+
+[node name="barrier_half_gltf" parent="." instance=ExtResource("51_ki3v1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, 2.5)
+
+[node name="bed_decorated_gltf" parent="." instance=ExtResource("52_xqdx1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.5, 0, 3.5)
+
+[node name="bed_floor_gltf" parent="." instance=ExtResource("53_cfacl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31, 0, 3.5)
+
+[node name="box_large_gltf" parent="bed_floor_gltf" instance=ExtResource("54_iubvn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5201, 0, -0.647787)
+
+[node name="bed_frame_gltf" parent="." instance=ExtResource("55_e1sad")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.5, 0, 3.5)
+
+[node name="box_small_gltf" parent="." instance=ExtResource("56_6juah")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37, 0, 2.5)
+
+[node name="box_small_decorated_gltf" parent="." instance=ExtResource("57_quqpu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.5, 0, 2.5)
+
+[node name="box_stacked_gltf" parent="." instance=ExtResource("58_m3iw2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.5, 0, 3)
