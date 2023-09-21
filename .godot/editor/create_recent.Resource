@@ -1,0 +1,2 @@
+StandardMaterial3D
+CompressedTexture2D

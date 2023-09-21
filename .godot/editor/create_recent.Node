@@ -1,11 +1,12 @@
 GPUParticles3D
-OmniLight3D
-StaticBody3D
-CollisionShape3D
 Node
+StaticBody3D
+GridMap
+LightmapProbe
+OmniLight3D
+CollisionShape3D
 VoxelGI
 State
-GridMap
 SpotLight3D
 AnimationTree
 Camera3D

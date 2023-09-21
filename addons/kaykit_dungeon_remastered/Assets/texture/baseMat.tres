@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://c20w3q1gt38xp"]
+
+[ext_resource type="Texture2D" uid="uid://xmgemu5e52k7" path="res://addons/kaykit_dungeon_remastered/Assets/texture/dungeon_texture.png" id="1_bnkhw"]
+
+[resource]
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("1_bnkhw")

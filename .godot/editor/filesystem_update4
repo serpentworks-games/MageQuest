@@ -1,5 +1,8 @@
-res://game_scenes/test_scene.tscn
+res://game/environ/mountedTorch_withLight.tscn
+res://addons/kaykit_dungeon_remastered/Assets/texture/baseMat.tres
 res://mesh_libraries/floorTiles.tres
 res://mesh_libraries/stairTiles.tres
 res://mesh_libraries/wallTiles.tres
-res://mesh_libraries/stair_meshes.tscn
+res://addons/quaternius simple nature pack/materials/leaves.tres
+res://addons/quaternius simple nature pack/meshes/bush_3.res
+res://game_scenes/test_scene.tscn

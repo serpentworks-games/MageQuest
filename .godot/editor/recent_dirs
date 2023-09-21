@@ -1,6 +1,10 @@
-res://mesh_libraries
-res://game_scenes
 res://
+res://game
+E:/GameDev/FBX2glTF-windows-x86_64
+res://mesh_libraries
+res://addons/kaykit_dungeon_remastered/Assets/texture
+res://game_scenes
+E:/GameDev
 res://game/environ
 res://scripts
 res://game/characters
