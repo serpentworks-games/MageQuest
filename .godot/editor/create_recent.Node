@@ -1,10 +1,12 @@
+BoneAttachment3D
+CollisionShape3D
+Area3D
 GPUParticles3D
 Node
 StaticBody3D
 GridMap
 LightmapProbe
 OmniLight3D
-CollisionShape3D
 VoxelGI
 State
 SpotLight3D

@@ -1,6 +1,9 @@
-[gd_scene load_steps=22 format=3 uid="uid://crp83jab1okt4"]
+[gd_scene load_steps=23 format=3 uid="uid://crp83jab1okt4"]
 
 [ext_resource type="Material" uid="uid://c20w3q1gt38xp" path="res://addons/kaykit_dungeon_remastered/Assets/texture/baseMat.tres" id="1_boi8h"]
+[ext_resource type="Texture2D" uid="uid://dsieibpnbunsw" path="res://flameGradient.tres" id="2_psvnn"]
+[ext_resource type="Texture2D" uid="uid://bck5qvwp5optp" path="res://addons/kenney_particle_pack/fire_02.png" id="3_dj8do"]
+[ext_resource type="Texture2D" uid="uid://cccafem548mn2" path="res://smokeGradient.tres" id="4_5wb4w"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_xps71"]
 
@@ -58,39 +61,44 @@ point_count = 3
 curve = SubResource("Curve_vnr0o")
 
 [sub_resource type="Curve" id="Curve_x1ggv"]
-_data = [Vector2(0, 0), 0.0, 2.0, 0, 1, Vector2(0.5, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.0105263), -1.97895, 0.0, 1, 0]
+_data = [Vector2(0, 0), 0.0, 1.3104, 0, 0, Vector2(0.247845, 1), 0.0, 0.0, 0, 0, Vector2(0.997845, 0.48421), 0.128532, 0.0, 0, 0]
 point_count = 3
 
 [sub_resource type="CurveTexture" id="CurveTexture_t3de4"]
 curve = SubResource("Curve_x1ggv")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_mb7rf"]
-lifetime_randomness = 1.0
+emission_shape = 2
+emission_sphere_radius = 1.0
 direction = Vector3(0, 1, 0)
-spread = 10.0
-gravity = Vector3(0, 9.8, 0)
+spread = 25.0
+gravity = Vector3(0, 0, 0)
+initial_velocity_max = 7.0
+angular_velocity_max = 70.0
+angle_max = 360.0
 scale_curve = SubResource("CurveTexture_t3de4")
 color_ramp = SubResource("GradientTexture1D_1x83o")
+color_initial_ramp = ExtResource("2_psvnn")
 hue_variation_curve = SubResource("CurveTexture_f0sk3")
 turbulence_noise_scale = 4.66
+anim_speed_max = 1.0
+anim_offset_max = 1.0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hjqdr"]
-transparency = 1
+transparency = 4
 blend_mode = 1
 shading_mode = 0
 vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("3_dj8do")
+billboard_mode = 3
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
 grow_amount = 1.733
 
 [sub_resource type="QuadMesh" id="QuadMesh_cnq5q"]
 material = SubResource("StandardMaterial3D_hjqdr")
-size = Vector2(0.5, 0.5)
-
-[sub_resource type="Gradient" id="Gradient_iuyph"]
-offsets = PackedFloat32Array(0.0230947, 0.200924, 1)
-colors = PackedColorArray(0.10748, 0.10748, 0.10748, 1, 0.226707, 0.226707, 0.226707, 1, 1, 1, 1, 1)
-
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_200lf"]
-gradient = SubResource("Gradient_iuyph")
+size = Vector2(0.2, 0.2)
 
 [sub_resource type="Curve" id="Curve_bb8to"]
 _data = [Vector2(0.00862069, 0), 0.0, 0.0, 0, 0, Vector2(0.668103, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.652632), 0.0, 0.0, 0, 0]
@@ -101,21 +109,35 @@ curve = SubResource("Curve_bb8to")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_7thof"]
 lifetime_randomness = 1.0
-emission_shape = 1
-emission_sphere_radius = 0.5
-gravity = Vector3(0, 9.8, 0)
+emission_shape = 2
+emission_sphere_radius = 1.0
+direction = Vector3(0, 1, 0)
+gravity = Vector3(0, 0, 0)
+initial_velocity_max = 8.0
+angular_velocity_max = 80.0
 damping_max = 8.987
+angle_max = 360.0
 scale_curve = SubResource("CurveTexture_fixgh")
-color_ramp = SubResource("GradientTexture1D_200lf")
+color_ramp = ExtResource("4_5wb4w")
+color_initial_ramp = ExtResource("4_5wb4w")
+anim_speed_max = 1.0
+anim_offset_max = 1.0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kde8y"]
-transparency = 3
-alpha_hash_scale = 1.0
-alpha_antialiasing_mode = 0
-blend_mode = 1
+transparency = 4
+blend_mode = 2
+shading_mode = 0
+vertex_color_use_as_albedo = true
+albedo_color = Color(1, 1, 1, 0.545098)
+albedo_texture = ExtResource("3_dj8do")
+billboard_mode = 3
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
 
 [sub_resource type="QuadMesh" id="QuadMesh_o2a20"]
 material = SubResource("StandardMaterial3D_kde8y")
+size = Vector2(0.2, 0.2)
 
 [node name="torch_mounted_gltf" type="Node3D"]
 
@@ -133,22 +155,22 @@ omni_range = 6.242
 omni_attenuation = 0.901252
 
 [node name="fireParticle" type="GPUParticles3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.989196, -0.146601, 0, 0.146601, 0.989196, 0, 0.80828, 0.487269)
+transform = Transform3D(0.1, 0, 0, 0, 0.0989196, -0.0146601, 0, 0.0146601, 0.0989196, 0.0546594, 0.639588, 0.487269)
 cast_shadow = 0
-amount = 30
+amount = 1000
 lifetime = 0.9
-speed_scale = 0.75
-draw_order = 3
+local_coords = true
 transform_align = 1
 process_material = SubResource("ParticleProcessMaterial_mb7rf")
 draw_pass_1 = SubResource("QuadMesh_cnq5q")
 
-[node name="GPUParticles3D" type="GPUParticles3D" parent="fireParticle"]
+[node name="smokeParticle" type="GPUParticles3D" parent="fireParticle"]
+transform = Transform3D(1, 0, 0, 0, 1, -4.47035e-08, 0, 4.47035e-08, 1, 0, 1.12837, -0.167228)
 cast_shadow = 0
-amount = 25
-lifetime = 2.0
+amount = 1000
+lifetime = 1.5
 randomness = 1.0
-draw_order = 3
-transform_align = 1
+visibility_aabb = AABB(-3.96521, -4, -3.47424, 7.91283, 8, 7.62329)
+local_coords = true
 process_material = SubResource("ParticleProcessMaterial_7thof")
 draw_pass_1 = SubResource("QuadMesh_o2a20")

@@ -6,3 +6,5 @@ res://mesh_libraries/wallTiles.tres
 res://addons/quaternius simple nature pack/materials/leaves.tres
 res://addons/quaternius simple nature pack/meshes/bush_3.res
 res://game_scenes/test_scene.tscn
+res://game/characters/player.tscn
+res://flameGradient.tres

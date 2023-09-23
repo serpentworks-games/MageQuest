@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://d11p54u3p6css"
+path="res://.godot/imported/PalmTree_3.obj-4f46ed8736a8b3a3b167a9da14a261b6.mesh"
+
+[deps]
+
+files=["res://.godot/imported/PalmTree_3.obj-4f46ed8736a8b3a3b167a9da14a261b6.mesh"]
+
+source_file="res://addons/Ultimate Nature Pack - Jun 2019/OBJ/PalmTree_3.obj"
+dest_files=["res://.godot/imported/PalmTree_3.obj-4f46ed8736a8b3a3b167a9da14a261b6.mesh", "res://.godot/imported/PalmTree_3.obj-4f46ed8736a8b3a3b167a9da14a261b6.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

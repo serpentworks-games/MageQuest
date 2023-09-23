@@ -1,0 +1,25 @@
+[gd_resource type="Environment" format=3 uid="uid://b4tk6fdnocht4"]
+
+[resource]
+background_mode = 1
+ambient_light_source = 2
+ambient_light_color = Color(0.776471, 0.839216, 0.909804, 1)
+tonemap_mode = 2
+tonemap_exposure = 0.78
+tonemap_white = 2.09
+ssao_radius = 0.99
+ssao_intensity = 2.69
+ssao_power = 0.430762
+ssao_detail = 0.1
+ssao_horizon = 0.0
+ssao_sharpness = 1.0
+ssil_radius = 6.49
+ssil_sharpness = 1.0
+sdfgi_use_occlusion = true
+sdfgi_read_sky_light = false
+glow_enabled = true
+glow_normalized = true
+glow_intensity = 0.71
+glow_strength = 0.74
+glow_blend_mode = 0
+volumetric_fog_density = 0.0221

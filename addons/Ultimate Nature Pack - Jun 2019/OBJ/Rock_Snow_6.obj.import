@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cury2n4558ao5"
+path="res://.godot/imported/Rock_Snow_6.obj-16b9c959c346c272497432ce39d89626.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Rock_Snow_6.obj-16b9c959c346c272497432ce39d89626.mesh"]
+
+source_file="res://addons/Ultimate Nature Pack - Jun 2019/OBJ/Rock_Snow_6.obj"
+dest_files=["res://.godot/imported/Rock_Snow_6.obj-16b9c959c346c272497432ce39d89626.mesh", "res://.godot/imported/Rock_Snow_6.obj-16b9c959c346c272497432ce39d89626.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

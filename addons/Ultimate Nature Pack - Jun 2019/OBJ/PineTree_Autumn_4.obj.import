@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://ch6184kmce2aq"
+path="res://.godot/imported/PineTree_Autumn_4.obj-d8957002ca484c0ba4b51f97e3b935b6.mesh"
+
+[deps]
+
+files=["res://.godot/imported/PineTree_Autumn_4.obj-d8957002ca484c0ba4b51f97e3b935b6.mesh"]
+
+source_file="res://addons/Ultimate Nature Pack - Jun 2019/OBJ/PineTree_Autumn_4.obj"
+dest_files=["res://.godot/imported/PineTree_Autumn_4.obj-d8957002ca484c0ba4b51f97e3b935b6.mesh", "res://.godot/imported/PineTree_Autumn_4.obj-d8957002ca484c0ba4b51f97e3b935b6.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b7tih3j6hnj67"
+path="res://.godot/imported/Willow_Autumn_3.obj-c71be1e9ce8e1c21374c0fc374b401ce.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Willow_Autumn_3.obj-c71be1e9ce8e1c21374c0fc374b401ce.mesh"]
+
+source_file="res://addons/Ultimate Nature Pack - Jun 2019/OBJ/Willow_Autumn_3.obj"
+dest_files=["res://.godot/imported/Willow_Autumn_3.obj-c71be1e9ce8e1c21374c0fc374b401ce.mesh", "res://.godot/imported/Willow_Autumn_3.obj-c71be1e9ce8e1c21374c0fc374b401ce.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

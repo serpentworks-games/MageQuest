@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://8cgnxtan83cp"
+path="res://.godot/imported/Rock_2.obj-388d2bf3ffe45de0026a135c3b8e81fb.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Rock_2.obj-388d2bf3ffe45de0026a135c3b8e81fb.mesh"]
+
+source_file="res://addons/Ultimate Nature Pack - Jun 2019/OBJ/Rock_2.obj"
+dest_files=["res://.godot/imported/Rock_2.obj-388d2bf3ffe45de0026a135c3b8e81fb.mesh", "res://.godot/imported/Rock_2.obj-388d2bf3ffe45de0026a135c3b8e81fb.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
