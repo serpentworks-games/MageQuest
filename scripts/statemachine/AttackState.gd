@@ -11,5 +11,6 @@ func _ready():
 	player.velocity.z = 0
 	
 func _physics_process(delta):
+	player.get_node("AnimationTree").advance(delta * player.attackSpeed)
 	if stateAnim.get_current_play_position() >= stateAnim.get_current_length() - kXFadeDuration:
 		player.ChangeState("idle")

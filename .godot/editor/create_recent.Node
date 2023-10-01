@@ -1,6 +1,10 @@
-BoneAttachment3D
+AnimationTree
+Node3D
 CollisionShape3D
 Area3D
+BoneAttachment3D
+MeshInstance3D
+CharacterBody3D
 GPUParticles3D
 Node
 StaticBody3D
@@ -10,10 +14,6 @@ OmniLight3D
 VoxelGI
 State
 SpotLight3D
-AnimationTree
 Camera3D
 SpringArm3D
-Node3D
-MeshInstance3D
 RigidBody3D
-CharacterBody3D
