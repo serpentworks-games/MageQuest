@@ -1,0 +1,17 @@
+E:\GameDev\MageQuest\.godot\mono\temp\bin\Debug\MageQuest.deps.json
+E:\GameDev\MageQuest\.godot\mono\temp\bin\Debug\MageQuest.runtimeconfig.json
+E:\GameDev\MageQuest\.godot\mono\temp\bin\Debug\MageQuest.dll
+E:\GameDev\MageQuest\.godot\mono\temp\bin\Debug\MageQuest.pdb
+E:\GameDev\MageQuest\.godot\mono\temp\bin\Debug\GodotSharp.dll
+E:\GameDev\MageQuest\.godot\mono\temp\bin\Debug\GodotSharpEditor.dll
+E:\GameDev\MageQuest\.godot\mono\temp\obj\Debug\MageQuest.csproj.AssemblyReference.cache
+E:\GameDev\MageQuest\.godot\mono\temp\obj\Debug\MageQuest.GeneratedMSBuildEditorConfig.editorconfig
+E:\GameDev\MageQuest\.godot\mono\temp\obj\Debug\MageQuest.AssemblyInfoInputs.cache
+E:\GameDev\MageQuest\.godot\mono\temp\obj\Debug\MageQuest.AssemblyInfo.cs
+E:\GameDev\MageQuest\.godot\mono\temp\obj\Debug\MageQuest.csproj.CoreCompileInputs.cache
+E:\GameDev\MageQuest\.godot\mono\temp\obj\Debug\MageQuest.csproj.CopyComplete
+E:\GameDev\MageQuest\.godot\mono\temp\obj\Debug\MageQuest.dll
+E:\GameDev\MageQuest\.godot\mono\temp\obj\Debug\refint\MageQuest.dll
+E:\GameDev\MageQuest\.godot\mono\temp\obj\Debug\MageQuest.pdb
+E:\GameDev\MageQuest\.godot\mono\temp\obj\Debug\MageQuest.genruntimeconfig.cache
+E:\GameDev\MageQuest\.godot\mono\temp\obj\Debug\ref\MageQuest.dll

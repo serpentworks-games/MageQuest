@@ -1,12 +1,14 @@
-AnimationTree
-Node3D
+SpringArm3D
 CollisionShape3D
+CharacterBody3D
+AnimationTree
+Camera3D
+Node
+MeshInstance3D
+Node3D
 Area3D
 BoneAttachment3D
-MeshInstance3D
-CharacterBody3D
 GPUParticles3D
-Node
 StaticBody3D
 GridMap
 LightmapProbe
@@ -14,6 +16,4 @@ OmniLight3D
 VoxelGI
 State
 SpotLight3D
-Camera3D
-SpringArm3D
 RigidBody3D

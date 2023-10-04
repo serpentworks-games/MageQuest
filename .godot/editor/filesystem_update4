@@ -7,10 +7,9 @@ res://flameGradient.tres
 res://smokeGradient.tres
 res://addons/quaternius simple nature pack/materials/leaves.tres
 res://addons/quaternius simple nature pack/meshes/bush_3.res
-res://scripts/statemachine/AttackState.gd
-res://scripts/PlayerController.gd
 res://game/characters/player.tscn
-res://addons/slime.tscn
-res://game/characters/baseMonster.tscn
-res://scripts/MonsterAI.gd
 res://game/characters/slimeMonster.tscn
+res://csharpTest.tscn
+res://scripts/test_scripts/InputReader.cs
+res://scripts/test_scripts/PlayerStateMachine.cs
+res://scripts/test_scripts/StateMachine.cs

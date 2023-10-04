@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "ZrsDIMitqIW6c9q/teuwuNYOEG6y38BvgobFyEXm6PfxI7IlTRUJ14KmodsyJ+xJDfZSXzELpF5FBxqihZSt1g==",
+  "success": true,
+  "projectFilePath": "E:\\GameDev\\MageQuest\\MageQuest.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\alexi\\.nuget\\packages\\godot.sourcegenerators\\4.1.1\\godot.sourcegenerators.4.1.1.nupkg.sha512",
+    "C:\\Users\\alexi\\.nuget\\packages\\godotsharp\\4.1.1\\godotsharp.4.1.1.nupkg.sha512",
+    "C:\\Users\\alexi\\.nuget\\packages\\godotsharpeditor\\4.1.1\\godotsharpeditor.4.1.1.nupkg.sha512"
+  ],
+  "logs": []
+}
