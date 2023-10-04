@@ -33,7 +33,10 @@ public partial class InputReader : Node
 
     public void OnMove()
     {
-        MovementValue = Input.GetVector("moveRight", "moveLeft", "moveDown", "moveUp");
+        float h = Input.GetAxis("moveLeft", "moveRight");
+        float v = Input.GetAxis("moveUp", "moveDown");
+
+        MovementValue = new Vector2(h, v);
     }
 
 }

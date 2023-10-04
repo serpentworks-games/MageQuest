@@ -16,6 +16,11 @@ public partial class StateMachine : Node
         currentState?.TickState((float)delta);
     }
 
+    public override void _PhysicsProcess(double delta)
+    {
+        currentState?.TickPhysicsState((float)delta);
+    }
+
     public void SwitchState(State newState)
     {
         currentState?.ExitState();
