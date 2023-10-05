@@ -58,6 +58,11 @@ attack={
 ]
 }
 
+[layer_names]
+
+3d_navigation/layer_1="Walkable"
+3d_navigation/layer_2="NotWalkable"
+
 [rendering]
 
 textures/lossless_compression/force_png=true

@@ -1,7 +1,4 @@
-res://scripts/test_scripts/InputReader.cs
-res://scripts/test_scripts/PlayerStateMachine.cs
-res://scripts/test_scripts/StateMachine.cs
-res://csharpTest.tscn
+res://game_scenes/test_scene.tscn
 res://addons/kaykit_dungeon_remastered/Assets/texture/baseMat.tres
 res://mesh_libraries/floorTiles.tres
 res://mesh_libraries/stairTiles.tres
@@ -10,8 +7,4 @@ res://flameGradient.tres
 res://smokeGradient.tres
 res://addons/quaternius simple nature pack/materials/leaves.tres
 res://addons/quaternius simple nature pack/meshes/bush_3.res
-res://game_scenes/test_scene.tscn
-res://game/characters/player.tscn
 res://game/characters/slimeMonster.tscn
-res://scripts/test_scripts/CameraRig.cs
-res://player_updated.tscn

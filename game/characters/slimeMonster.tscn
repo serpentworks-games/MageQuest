@@ -1,6 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dxn78dir45e4l"]
-
-[ext_resource type="Script" path="res://scripts/MonsterAI.gd" id="1_h6vw6"]
+[gd_scene load_steps=14 format=3 uid="uid://dxn78dir45e4l"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_gfxms"]
 radius = 0.7
@@ -431,11 +429,6 @@ _data = {
 [node name="Slime" type="CharacterBody3D"]
 axis_lock_angular_x = true
 axis_lock_angular_z = true
-script = ExtResource("1_h6vw6")
-idleAnimName = "Armature|Slime_Idle"
-moveAnimName = "Armature|Slime_Walk"
-attackAnimName = "Armature|Slime_Attack"
-deathAnimName = "Armature|Slime_Death"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.901631, 0)
