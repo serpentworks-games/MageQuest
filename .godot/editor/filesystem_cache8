@@ -1,10 +1,10 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1696480881
+::res://::1696567233
 bellCurve.tres::Curve::2644359972083307535::1695275275::0::1::::<><>::
 fireParticle.tscn::PackedScene::7754278549386220983::1695275275::0::1::::<><>::
-flameGradient.tres::GradientTexture1D::8439433489206884286::1696480817::0::1::::<><>::
+flameGradient.tres::GradientTexture1D::8439433489206884286::1696566089::0::1::::<><>::
 icon.svg::CompressedTexture2D::5881602925114526452::1695005191::1695005197::1::::<><>::
-smokeGradient.tres::GradientTexture1D::4917356969174092317::1696480817::0::1::::<><>::
+smokeGradient.tres::GradientTexture1D::4917356969174092317::1696566089::0::1::::<><>::
 ::res://addons/::1696121644
 kristy-doan-main-fire.jpg::CompressedTexture2D::4955888158326981869::1695275275::1695275275::1::::<><>::
 Mushnub.gltf::PackedScene::8381878804345736935::1696119307::1696119367::1::::<><>::
@@ -488,8 +488,8 @@ wall_window_closed.obj::Mesh::5501905415961970682::1695005271::1695005282::1::::
 wall_window_closed_scaffold.obj::Mesh::9215731102533617153::1695005271::1695005281::1::::<><>::
 wall_window_open.obj::Mesh::8046201333386434015::1695005271::1695005281::1::::<><>::
 wall_window_open_scaffold.obj::Mesh::5838136894129436633::1695005271::1695005281::1::::<><>::
-::res://addons/kaykit_dungeon_remastered/Assets/texture/::1696480815
-baseMat.tres::StandardMaterial3D::6720936246372429681::1696480815::0::1::::<><>::uid://xmgemu5e52k7::::res://addons/kaykit_dungeon_remastered/Assets/texture/dungeon_texture.png
+::res://addons/kaykit_dungeon_remastered/Assets/texture/::1696566088
+baseMat.tres::StandardMaterial3D::6720936246372429681::1696566088::0::1::::<><>::uid://xmgemu5e52k7::::res://addons/kaykit_dungeon_remastered/Assets/texture/dungeon_texture.png
 dungeon_texture.png::CompressedTexture2D::1639488044401589328::1695005271::1695275275::1::::<><>::
 ::res://addons/kenney_particle_pack/::1695531426
 circle_01.png::CompressedTexture2D::5580226472570263270::1695275275::1695275275::1::::<><>::
@@ -606,14 +606,14 @@ tree_1.glb::PackedScene::2761640110013768987::1695275275::1695275275::1::::<><>:
 tree_2.glb::PackedScene::922742659488959718::1695275275::1695275275::1::::<><>::
 tree_3.glb::PackedScene::2728752852186275469::1695275275::1695275275::1::::<><>::
 tree_4.glb::PackedScene::5170933118496260783::1695275275::1695275275::1::::<><>::
-::res://addons/quaternius simple nature pack/materials/::1696480817
-leaves.tres::StandardMaterial3D::1084691856906823309::1696480817::0::1::::<><>::
+::res://addons/quaternius simple nature pack/materials/::1696566089
+leaves.tres::StandardMaterial3D::1084691856906823309::1696566089::0::1::::<><>::
 rock.tres::StandardMaterial3D::8149731648329633354::1695275275::0::1::::<><>::
 tree.tres::StandardMaterial3D::606695521691358605::1695275275::0::1::::<><>::
-::res://addons/quaternius simple nature pack/meshes/::1696480817
+::res://addons/quaternius simple nature pack/meshes/::1696566089
 bush_1.res::ArrayMesh::3485926894977572786::1695275275::0::1::::<><>::uid://ppoymfxr1m0l
 bush_2.res::ArrayMesh::8374568576143867550::1695275275::0::1::::<><>::uid://ppoymfxr1m0l
-bush_3.res::ArrayMesh::5090817351331143467::1696480817::0::1::::<><>::uid://ppoymfxr1m0l::::res://addons/quaternius simple nature pack/materials/leaves.tres<>uid://iv5glyihk3gr::::res://addons/quaternius simple nature pack/materials/tree.tres
+bush_3.res::ArrayMesh::5090817351331143467::1696566089::0::1::::<><>::uid://ppoymfxr1m0l::::res://addons/quaternius simple nature pack/materials/leaves.tres<>uid://iv5glyihk3gr::::res://addons/quaternius simple nature pack/materials/tree.tres
 grass_1.res::ArrayMesh::3420711951161252394::1695275275::0::1::::<><>::uid://ppoymfxr1m0l
 grass_2.res::ArrayMesh::2219041240688089191::1695275275::0::1::::<><>::uid://ppoymfxr1m0l
 grass_3.res::ArrayMesh::3560698432387351637::1695275275::0::1::::<><>::uid://ppoymfxr1m0l
@@ -946,37 +946,41 @@ WoodLog_Moss.obj::Mesh::5374623166722937463::1695531426::1695531426::1::::<><>::
 WoodLog_Snow.obj::Mesh::6441588656999518105::1695531426::1695531426::1::::<><>::
 ::res://game/::1695275275
 door.tscn::PackedScene::4230909405265425212::1695275275::0::1::::<><>::uid://c20w3q1gt38xp
-::res://game/characters/::1696480427
-player_updated.tscn::PackedScene::8903670771628514729::1696480704::0::1::::<><>::uid://b1thny2frcsrt
-slimeMonster.tscn::PackedScene::8802444411265039957::1696467617::0::1::::<><>::res://scripts/MonsterAI.gd
+::res://game/characters/::1696567174
+player_updated.tscn::PackedScene::8903670771628514729::1696566088::0::1::::<><>::uid://b1thny2frcsrt::::res://addons/kaykit_character_pack_adventures/Characters/gltf/Mage_mage_texture.png<>res://scripts/statemachines/PlayerStateMachine.cs<>res://scripts/core/InputReader.cs<>res://scripts/core/CameraRig.cs
+slimeMonster.tscn::PackedScene::8802444411265039957::1696567174::0::1::::<><>::res://scripts/statemachines/states/enemies/slime/SlimeStateMachine.cs
 ::res://game/environ/::1695531426
 mountedTorch_withLight.tscn::PackedScene::5999071511325173627::1695531426::0::1::::<><>::uid://c20w3q1gt38xp
-::res://game_scenes/::1696480815
-test_scene.tscn::PackedScene::8677549840849587329::1696480815::0::1::::<><>::uid://d3dtxvqm30jmk::::res://mesh_libraries/floorTiles.tres<>uid://b4tk6fdnocht4::::res://game_scenes/testSceneData/test_scene_environ.tres<>uid://blc7rseqmhmf1::::res://mesh_libraries/stairTiles.tres<>uid://fgq00wjgfo5d::::res://mesh_libraries/wallTiles.tres<>uid://cqm4beuil85kn::::res://addons/kaykit_dungeon_remastered/Assets/gltf/misc/crates_stacked.gltf.glb<>uid://0ilrl0gpqi8c::::res://addons/kaykit_dungeon_remastered/Assets/gltf/misc/rubble_half.gltf.glb<>uid://bbfqfxcfg155w::::res://addons/kaykit_dungeon_remastered/Assets/gltf/misc/table_long_broken.gltf.glb<>uid://dggc482jwphsj::::res://addons/kaykit_dungeon_remastered/Assets/gltf/misc/table_medium_broken.gltf.glb<>uid://crp83jab1okt4::::res://game/environ/mountedTorch_withLight.tscn<>uid://b1jqpvqplqur1::::res://game/door.tscn<>uid://c20w3q1gt38xp::::res://addons/kaykit_dungeon_remastered/Assets/texture/baseMat.tres<>uid://hqlq0luk55aa::::res://addons/quaternius simple nature pack/static bodies/bush_3.tscn<>res://addons/quaternius simple nature pack/static bodies/bush_2.tscn<>uid://cygv0m43n3g65::::res://addons/quaternius simple nature pack/static bodies/bush_1.tscn<>uid://butw4poodu5gg::::res://addons/quaternius simple nature pack/static bodies/grass_2.tscn<>uid://bjxwye6xb55u8::::res://addons/quaternius simple nature pack/static bodies/grass_1.tscn<>uid://b6g8yc62f2j5s::::res://addons/quaternius simple nature pack/static bodies/grass_3.tscn<>uid://2mqqu1vombe5::::res://addons/quaternius simple nature pack/static bodies/tree_4.tscn<>uid://t7f7lc8h1od6::::res://addons/quaternius simple nature pack/static bodies/tree_3.tscn<>uid://ca026by8kvonb::::res://addons/quaternius simple nature pack/static bodies/tree_2.tscn<>uid://t54m5opl3nv2::::res://addons/quaternius simple nature pack/static bodies/tree_1.tscn<>uid://dy4aflhsiehg8::::res://game/characters/player_updated.tscn<>uid://dxn78dir45e4l::::res://game/characters/slimeMonster.tscn
+::res://game_scenes/::1696567188
+test_scene.tscn::PackedScene::8677549840849587329::1696567188::0::1::::<><>::uid://d3dtxvqm30jmk::::res://mesh_libraries/floorTiles.tres<>uid://b4tk6fdnocht4::::res://game_scenes/testSceneData/test_scene_environ.tres<>uid://blc7rseqmhmf1::::res://mesh_libraries/stairTiles.tres<>uid://fgq00wjgfo5d::::res://mesh_libraries/wallTiles.tres<>uid://cqm4beuil85kn::::res://addons/kaykit_dungeon_remastered/Assets/gltf/misc/crates_stacked.gltf.glb<>uid://0ilrl0gpqi8c::::res://addons/kaykit_dungeon_remastered/Assets/gltf/misc/rubble_half.gltf.glb<>uid://bbfqfxcfg155w::::res://addons/kaykit_dungeon_remastered/Assets/gltf/misc/table_long_broken.gltf.glb<>uid://dggc482jwphsj::::res://addons/kaykit_dungeon_remastered/Assets/gltf/misc/table_medium_broken.gltf.glb<>uid://crp83jab1okt4::::res://game/environ/mountedTorch_withLight.tscn<>uid://b1jqpvqplqur1::::res://game/door.tscn<>uid://c20w3q1gt38xp::::res://addons/kaykit_dungeon_remastered/Assets/texture/baseMat.tres<>uid://hqlq0luk55aa::::res://addons/quaternius simple nature pack/static bodies/bush_3.tscn<>res://addons/quaternius simple nature pack/static bodies/bush_2.tscn<>uid://cygv0m43n3g65::::res://addons/quaternius simple nature pack/static bodies/bush_1.tscn<>uid://butw4poodu5gg::::res://addons/quaternius simple nature pack/static bodies/grass_2.tscn<>uid://bjxwye6xb55u8::::res://addons/quaternius simple nature pack/static bodies/grass_1.tscn<>uid://b6g8yc62f2j5s::::res://addons/quaternius simple nature pack/static bodies/grass_3.tscn<>uid://2mqqu1vombe5::::res://addons/quaternius simple nature pack/static bodies/tree_4.tscn<>uid://t7f7lc8h1od6::::res://addons/quaternius simple nature pack/static bodies/tree_3.tscn<>uid://ca026by8kvonb::::res://addons/quaternius simple nature pack/static bodies/tree_2.tscn<>uid://t54m5opl3nv2::::res://addons/quaternius simple nature pack/static bodies/tree_1.tscn<>uid://dy4aflhsiehg8::::res://game/characters/player_updated.tscn
 ::res://game_scenes/testSceneData/::1695531426
 test_scene.VoxelGI_data.res::VoxelGIData::9216849662271899837::1695531426::0::1::::<><>::
 test_scene_environ.tres::Environment::4461783123922512911::1695531426::0::1::::<><>::
-::res://mesh_libraries/::1696480817
-floorTiles.tres::MeshLibrary::9131938630619624270::1696480815::0::1::::<><>::uid://c20w3q1gt38xp::::res://addons/kaykit_dungeon_remastered/Assets/texture/baseMat.tres
+::res://mesh_libraries/::1696566089
+floorTiles.tres::MeshLibrary::9131938630619624270::1696566088::0::1::::<><>::uid://c20w3q1gt38xp::::res://addons/kaykit_dungeon_remastered/Assets/texture/baseMat.tres
 floor_meshes.tscn::PackedScene::2552952005705201753::1695275276::0::1::::<><>::uid://c20w3q1gt38xp
 misc_tiles.tscn::PackedScene::8015972393700000546::1695275276::0::1::::<><>::uid://dcq4kjplbpv5n
 README.md::TextFile::-1::1695275275::0::1::::<><>::
-stairTiles.tres::MeshLibrary::3164600973827299180::1696480816::0::1::::<><>::uid://c20w3q1gt38xp::::res://addons/kaykit_dungeon_remastered/Assets/texture/baseMat.tres
+stairTiles.tres::MeshLibrary::3164600973827299180::1696566088::0::1::::<><>::uid://c20w3q1gt38xp::::res://addons/kaykit_dungeon_remastered/Assets/texture/baseMat.tres
 stair_meshes.tscn::PackedScene::8854416685471573229::1695275276::0::1::::<><>::uid://c20w3q1gt38xp
-wallTiles.tres::MeshLibrary::364347948933007711::1696480817::0::1::::<><>::uid://c20w3q1gt38xp::::res://addons/kaykit_dungeon_remastered/Assets/texture/baseMat.tres
+wallTiles.tres::MeshLibrary::364347948933007711::1696566089::0::1::::<><>::uid://c20w3q1gt38xp::::res://addons/kaykit_dungeon_remastered/Assets/texture/baseMat.tres
 wall_meshes.tscn::PackedScene::2571521996263945664::1695275276::0::1::::<><>::uid://c20w3q1gt38xp
-::res://scripts/::1696480401
+::res://scripts/::1696480889
 MonsterAI.gd::GDScript::-1::1696480359::0::1::::<>CharacterBody3D<>::
 ::res://scripts/core/::1696480343
 CameraRig.cs::CSharpScript::-1::1696467617::0::1::::<><>::
 InputReader.cs::CSharpScript::-1::1696467617::0::1::::<><>::
-::res://scripts/statemachine/::1696480684
+::res://scripts/statemachines/::1696567233
+EnemyStateMachine.cs::CSharpScript::-1::1696566766::0::1::::<><>::
 PlayerStateMachine.cs::CSharpScript::-1::1696467617::0::1::::<><>::
 State.cs::CSharpScript::-1::1696467617::0::1::::<><>::
 StateMachine.cs::CSharpScript::-1::1696467617::0::1::::<><>::
-::res://scripts/statemachine/states/::1696480881
-::res://scripts/statemachine/states/enemies_shared/::1696480876
-::res://scripts/statemachine/states/player/::1696480881
+::res://scripts/statemachines/states/::1696566316
+::res://scripts/statemachines/states/enemies/::1696566331
+::res://scripts/statemachines/states/enemies/shared/::1696567233
+::res://scripts/statemachines/states/enemies/slime/::1696566912
+SlimeStateMachine.cs::CSharpScript::-1::1696567108::0::1::::<><>::
+::res://scripts/statemachines/states/player/::1696480881
 PlayerBaseState.cs::CSharpScript::-1::1696467617::0::1::::<><>::
 PlayerIdleState.cs::CSharpScript::-1::1696467617::0::1::::<><>::
 ::res://scripts/utils/::1696480394

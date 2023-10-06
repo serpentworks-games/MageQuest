@@ -1,4 +1,6 @@
-[gd_scene load_steps=14 format=3 uid="uid://dxn78dir45e4l"]
+[gd_scene load_steps=23 format=3 uid="uid://dxn78dir45e4l"]
+
+[ext_resource type="Script" path="res://scripts/statemachines/SlimeStateMachine.cs" id="1_bpsrb"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_gfxms"]
 radius = 0.7
@@ -87,6 +89,10 @@ bind/11/bone = -1
 bind/11/pose = Transform3D(1, -1.3898e-07, -4.00871e-08, -5.16722e-08, -0.602092, 0.798426, -1.35102e-07, -0.798427, -0.602092, 0.000133157, -0.0162358, -0.00420637)
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_kdinw"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_bkc26"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_3mh3q"]
 
 [sub_resource type="Animation" id="Animation_q6y11"]
 resource_name = "Armature|Slime_Attack"
@@ -422,9 +428,42 @@ _data = {
 "Armature|Slime_Walk": SubResource("Animation_kkwuy")
 }
 
-[sub_resource type="SphereShape3D" id="SphereShape3D_bkc26"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_o5sx5"]
+animation = &"Armature|Slime_Attack"
 
-[sub_resource type="SphereShape3D" id="SphereShape3D_3mh3q"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_a6h52"]
+animation = &"Armature|Slime_Death"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_q1i47"]
+animation = &"Armature|Slime_Idle"
+
+[sub_resource type="AnimationNodeOneShot" id="AnimationNodeOneShot_e5ep6"]
+
+[sub_resource type="AnimationNodeOneShot" id="AnimationNodeOneShot_exfet"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_txcna"]
+animation = &"Armature|Slime_Walk"
+
+[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_sdbeb"]
+
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_murel"]
+graph_offset = Vector2(-29.948, 9.58421)
+nodes/Attack/node = SubResource("AnimationNodeAnimation_o5sx5")
+nodes/Attack/position = Vector2(100, 800)
+nodes/Death/node = SubResource("AnimationNodeAnimation_a6h52")
+nodes/Death/position = Vector2(100, 600)
+nodes/Idle/node = SubResource("AnimationNodeAnimation_q1i47")
+nodes/Idle/position = Vector2(100, 400)
+nodes/OneShot/node = SubResource("AnimationNodeOneShot_exfet")
+nodes/OneShot/position = Vector2(640, 120)
+"nodes/OneShot 2/node" = SubResource("AnimationNodeOneShot_e5ep6")
+"nodes/OneShot 2/position" = Vector2(860, 80)
+nodes/Walk/node = SubResource("AnimationNodeAnimation_txcna")
+nodes/Walk/position = Vector2(100, 200)
+nodes/output/position = Vector2(1100, 80)
+nodes/velocity/node = SubResource("AnimationNodeBlend2_sdbeb")
+nodes/velocity/position = Vector2(420, 140)
+node_connections = [&"output", 0, &"OneShot 2", &"velocity", 0, &"Idle", &"velocity", 1, &"Walk", &"OneShot", 0, &"velocity", &"OneShot", 1, &"Death", &"OneShot 2", 0, &"OneShot", &"OneShot 2", 1, &"Attack"]
 
 [node name="Slime" type="CharacterBody3D"]
 axis_lock_angular_x = true
@@ -454,7 +493,7 @@ bones/1/name = "Body"
 bones/1/parent = 0
 bones/1/rest = Transform3D(1, 6.31076e-30, -2.38419e-07, -6.31076e-30, 1, 0, 2.38419e-07, 1.50463e-36, 1, -3.91166e-32, 0.00407887, 0)
 bones/1/enabled = true
-bones/1/position = Vector3(-5.83844e-33, 0.00185498, 0)
+bones/1/position = Vector3(-7.44458e-33, 0.00491655, 0)
 bones/1/rotation = Quaternion(3.76166e-37, -1.19209e-07, -3.15538e-30, 1)
 bones/1/scale = Vector3(1, 1, 1)
 bones/2/name = "Neck"
@@ -511,14 +550,14 @@ bones/9/parent = 8
 bones/9/rest = Transform3D(1, 3.70587e-10, 4.85723e-17, -3.18375e-10, 0.85911, 0.511791, 1.89663e-10, -0.511791, 0.85911, 0, 0.00273606, -2.98023e-10)
 bones/9/enabled = true
 bones/9/position = Vector3(0, 0.00273606, -2.98023e-10)
-bones/9/rotation = Quaternion(-0.265415, -4.91796e-11, -1.78648e-10, 0.964134)
+bones/9/rotation = Quaternion(-0.148412, -7.01559e-11, -1.71499e-10, 0.988926)
 bones/9/scale = Vector3(1, 1, 1)
 bones/10/name = "Hand.L"
 bones/10/parent = 9
 bones/10/rest = Transform3D(1, -2.80371e-10, 1.00366e-10, 2.97075e-10, 0.962627, -0.270831, -2.06821e-11, 0.270831, 0.962627, 3.12961e-12, 0.00218949, -4.84288e-10)
 bones/10/enabled = true
 bones/10/position = Vector3(3.12961e-12, 0.00218949, -4.84288e-10)
-bones/10/rotation = Quaternion(0.136699, 3.05489e-11, 1.4573e-10, 0.990613)
+bones/10/rotation = Quaternion(0.512599, 8.50194e-11, 1.22238e-10, 0.858628)
 bones/10/scale = Vector3(1, 1, 1)
 bones/11/name = "Hand.L_end"
 bones/11/parent = 10
@@ -539,14 +578,14 @@ bones/13/parent = 12
 bones/13/rest = Transform3D(1, 5.20126e-08, -1.12214e-07, -1.02115e-07, 0.85911, -0.511791, 6.97845e-08, 0.511791, 0.85911, -7.04002e-12, 0.00273606, -2.72318e-10)
 bones/13/enabled = true
 bones/13/position = Vector3(-7.04002e-12, 0.00273606, -2.72318e-10)
-bones/13/rotation = Quaternion(0.265415, -4.71922e-08, -3.99652e-08, 0.964134)
+bones/13/rotation = Quaternion(0.113161, -4.04459e-08, -4.67809e-08, 0.993577)
 bones/13/scale = Vector3(1, 1, 1)
 bones/14/name = "Hand.R"
 bones/14/parent = 13
 bones/14/rest = Transform3D(1, -5.23612e-08, 1.37271e-07, 1.3227e-08, 0.962627, 0.270831, -1.46322e-07, -0.270831, 0.962627, -1.69791e-12, 0.00218949, 5.56479e-10)
 bones/14/enabled = true
 bones/14/position = Vector3(-1.69791e-12, 0.00218949, 5.56479e-10)
-bones/14/rotation = Quaternion(-0.136699, 7.15703e-08, 1.65524e-08, 0.990613)
+bones/14/rotation = Quaternion(-0.531897, 5.84359e-08, 4.45145e-08, 0.846809)
 bones/14/scale = Vector3(1, 1, 1)
 bones/15/name = "Hand.R_end"
 bones/15/parent = 14
@@ -561,18 +600,13 @@ mesh = SubResource("ArrayMesh_mlr0y")
 skin = SubResource("Skin_n8sdg")
 
 [node name="BoneAttachment3D" type="BoneAttachment3D" parent="Slime/RootNode/Armature/Skeleton3D"]
-transform = Transform3D(-8.17701e-07, 0.266624, -0.9638, -1, -2.01166e-07, 8.20495e-07, 1.49012e-08, 0.963801, 0.266624, 0.000284099, 1.74623e-10, 0.0104125)
+transform = Transform3D(-8.71718e-07, 0.266624, -0.963801, -1, -2.01166e-07, 8.83359e-07, 3.72529e-08, 0.963801, 0.266624, 0.000284099, 1.74623e-10, 0.0134741)
 bone_name = "Head"
 bone_idx = 3
 
 [node name="Weapon" type="CollisionShape3D" parent="Slime/RootNode/Armature/Skeleton3D/BoneAttachment3D"]
 transform = Transform3D(0.02, 2.22045e-16, 0, 5.55112e-17, 0.02, -4.85621e-17, 0, 4.65661e-10, 0.02, 2.61934e-10, 0.00334567, -0.00129986)
 shape = SubResource("SphereShape3D_kdinw")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Slime"]
-libraries = {
-"": SubResource("AnimationLibrary_8pf7n")
-}
 
 [node name="AttackZone" type="Area3D" parent="."]
 metadata/_edit_lock_ = true
@@ -588,7 +622,24 @@ metadata/_edit_lock_ = true
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
 shape = SubResource("SphereShape3D_3mh3q")
 
-[connection signal="body_entered" from="AttackZone" to="." method="OnAttackZoneEntered"]
-[connection signal="body_exited" from="AttackZone" to="." method="OnAttackZoneExited"]
-[connection signal="body_entered" from="ChaseZone" to="." method="OnChaseZoneEntered"]
-[connection signal="body_exited" from="ChaseZone" to="." method="OnChaseZoneExited"]
+[node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("EnemyMesh")]
+script = ExtResource("1_bpsrb")
+EnemyMesh = NodePath("../Slime")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../Slime")
+libraries = {
+"": SubResource("AnimationLibrary_8pf7n")
+}
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource("AnimationNodeBlendTree_murel")
+anim_player = NodePath("../AnimationPlayer")
+active = true
+parameters/OneShot/active = false
+parameters/OneShot/internal_active = false
+parameters/OneShot/request = 0
+"parameters/OneShot 2/active" = false
+"parameters/OneShot 2/internal_active" = false
+"parameters/OneShot 2/request" = 0
+parameters/velocity/blend_amount = 0.0

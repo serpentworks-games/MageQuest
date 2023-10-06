@@ -1,6 +1,6 @@
 is_global = true
 build_property.GodotDisabledSourceGenerators = 
-build_property.GodotProjectDir = d:\GameDev\GodotProjects\MageQuest\
+build_property.GodotProjectDir = D:\GameDev\GodotProjects\MageQuest\
 build_property.GodotProjectDirBase64 = 
 build_property.GodotSourceGenerators = 
 build_property.IsGodotToolsProject = 
@@ -13,4 +13,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = MageQuest
-build_property.ProjectDir = d:\GameDev\GodotProjects\MageQuest\
+build_property.ProjectDir = D:\GameDev\GodotProjects\MageQuest\
