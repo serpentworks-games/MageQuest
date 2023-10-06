@@ -1,2 +1,4 @@
+Image
+World3D
 StandardMaterial3D
 CompressedTexture2D

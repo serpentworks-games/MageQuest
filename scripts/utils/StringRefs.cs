@@ -7,7 +7,12 @@ using System;
 /// </summary>
 public static class StringRefs
 {
-	public static string GravityPath => "physics/3d/default_gravity";
-	//Anim Refs
-	public static string MoveBlendTreeName => "parameters/AnimTree/velocity/blend_amount";
+    //Shared
+	//Physics
+    public static string GravityPath => "physics/3d/default_gravity";
+
+	//Anim Params
+    public static string AnimTreeVelocityBlendParam => "parameters/velocity/blend_amount";
+    public static string AnimTreeDeathTriggerRequestParam => "parameters/deathTrigger/request";
+    public static string AnimTreeAttackTriggerRequestParam => "parameters/attackTrigger/request";
 }

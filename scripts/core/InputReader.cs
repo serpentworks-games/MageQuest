@@ -9,6 +9,8 @@ public partial class InputReader : Node
 
     [Export] public Vector2 MovementValue { get; private set; }
 
+    public bool IsAttackPressed { get; private set; }
+
     public override void _Process(double delta)
     {
         OnJump();
@@ -28,7 +30,14 @@ public partial class InputReader : Node
     public void OnAttack()
     {
         if (Input.IsActionPressed("attack"))
-            AttackEvent?.Invoke();
+        {
+            Debug.Print("Attack pressed!");
+            IsAttackPressed = true;
+        }
+        else
+        {
+            IsAttackPressed = false;
+        }
     }
 
     public void OnMove()

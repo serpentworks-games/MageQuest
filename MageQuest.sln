@@ -1,6 +1,6 @@
 ﻿Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MageQuest", "MageQuest.csproj", "{3B371B45-FD1A-4443-B343-C569C8C01823}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MageQuest", "MageQuest.csproj", "{7A3A9EC7-6204-47C0-BB11-520F771E2C6E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,11 +9,11 @@ Global
 	ExportRelease|Any CPU = ExportRelease|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{3B371B45-FD1A-4443-B343-C569C8C01823}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3B371B45-FD1A-4443-B343-C569C8C01823}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3B371B45-FD1A-4443-B343-C569C8C01823}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
-		{3B371B45-FD1A-4443-B343-C569C8C01823}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
-		{3B371B45-FD1A-4443-B343-C569C8C01823}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
-		{3B371B45-FD1A-4443-B343-C569C8C01823}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
+		{7A3A9EC7-6204-47C0-BB11-520F771E2C6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A3A9EC7-6204-47C0-BB11-520F771E2C6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A3A9EC7-6204-47C0-BB11-520F771E2C6E}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
+		{7A3A9EC7-6204-47C0-BB11-520F771E2C6E}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
+		{7A3A9EC7-6204-47C0-BB11-520F771E2C6E}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
+		{7A3A9EC7-6204-47C0-BB11-520F771E2C6E}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
 	EndGlobalSection
 EndGlobal

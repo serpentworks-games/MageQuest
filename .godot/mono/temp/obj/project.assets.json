@@ -88,24 +88,26 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Rin\\.nuget\\packages\\": {}
+    "C:\\Users\\alexi\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\GameDev\\GodotProjects\\MageQuest\\MageQuest.csproj",
+      "projectUniqueName": "E:\\GameDev\\MageQuest\\MageQuest.csproj",
       "projectName": "MageQuest",
-      "projectPath": "D:\\GameDev\\GodotProjects\\MageQuest\\MageQuest.csproj",
-      "packagesPath": "C:\\Users\\Rin\\.nuget\\packages\\",
-      "outputPath": "D:\\GameDev\\GodotProjects\\MageQuest\\.godot\\mono\\temp\\obj\\",
+      "projectPath": "E:\\GameDev\\MageQuest\\MageQuest.csproj",
+      "packagesPath": "C:\\Users\\alexi\\.nuget\\packages\\",
+      "outputPath": "E:\\GameDev\\MageQuest\\.godot\\mono\\temp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Rin\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\alexi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -148,26 +150,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[6.0.14, 6.0.14]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[6.0.14, 6.0.14]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[6.0.14, 6.0.14]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.411\\RuntimeIdentifierGraph.json"
       }
     }
   }

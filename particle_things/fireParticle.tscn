@@ -1,0 +1,54 @@
+[gd_scene load_steps=10 format=3 uid="uid://diqh3na0ovyuh"]
+
+[sub_resource type="Gradient" id="Gradient_njd18"]
+offsets = PackedFloat32Array(0, 0.237875, 1)
+colors = PackedColorArray(1, 0.7659, 0.727377, 1, 0.99, 0, 0, 1, 0.983333, 1, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_1x83o"]
+gradient = SubResource("Gradient_njd18")
+
+[sub_resource type="Curve" id="Curve_vnr0o"]
+min_value = -1.0
+_data = [Vector2(0, 0.0315789), 0.0, 0.0, 0, 0, Vector2(0.502155, 1), 0.0, 0.0, 0, 0, Vector2(1, -0.0526316), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_f0sk3"]
+curve = SubResource("Curve_vnr0o")
+
+[sub_resource type="Curve" id="Curve_x1ggv"]
+_data = [Vector2(0, 0), 0.0, 2.0, 0, 1, Vector2(0.5, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.0105263), -1.97895, 0.0, 1, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_t3de4"]
+curve = SubResource("Curve_x1ggv")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_61wyj"]
+lifetime_randomness = 1.0
+direction = Vector3(0, 1, 0)
+spread = 10.0
+gravity = Vector3(0, 9.8, 0)
+scale_curve = SubResource("CurveTexture_t3de4")
+color_ramp = SubResource("GradientTexture1D_1x83o")
+hue_variation_curve = SubResource("CurveTexture_f0sk3")
+turbulence_noise_scale = 4.66
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hjqdr"]
+transparency = 1
+blend_mode = 1
+shading_mode = 0
+vertex_color_use_as_albedo = true
+grow_amount = 1.733
+
+[sub_resource type="QuadMesh" id="QuadMesh_jrat3"]
+material = SubResource("StandardMaterial3D_hjqdr")
+size = Vector2(0.5, 0.5)
+
+[node name="GPUParticles3D" type="GPUParticles3D"]
+transform = Transform3D(1, 0, 0, 0, 0.989196, -0.146601, 0, 0.146601, 0.989196, 0, 0.80828, 0.487269)
+cast_shadow = 0
+amount = 30
+lifetime = 0.9
+speed_scale = 0.75
+visibility_aabb = AABB(-0.264555, -0.158724, -0.267424, 0.560359, 1.45783, 0.586606)
+process_material = SubResource("ParticleProcessMaterial_61wyj")
+draw_pass_1 = SubResource("QuadMesh_jrat3")

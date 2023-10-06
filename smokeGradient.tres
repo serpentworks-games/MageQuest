@@ -1,8 +1,0 @@
-[gd_resource type="GradientTexture1D" load_steps=2 format=3 uid="uid://cccafem548mn2"]
-
-[sub_resource type="Gradient" id="Gradient_iuyph"]
-offsets = PackedFloat32Array(0.0230947, 0.182448, 1)
-colors = PackedColorArray(0.10748, 0.10748, 0.10748, 1, 0.851769, 0.851769, 0.851769, 1, 0, 0, 0, 1)
-
-[resource]
-gradient = SubResource("Gradient_iuyph")

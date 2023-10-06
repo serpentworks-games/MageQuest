@@ -1,19 +1,19 @@
+res://scripts/core/CameraRig.cs
+res://scripts/core/ForceHandler.cs
+res://scripts/core/InputReader.cs
+res://scripts/statemachines/EnemyStateMachine.cs
+res://scripts/statemachines/PlayerStateMachine.cs
+res://scripts/statemachines/SlimeStateMachine.cs
+res://scripts/statemachines/StateMachine.cs
 res://game/characters/player_updated.tscn
 res://addons/kaykit_dungeon_remastered/Assets/texture/baseMat.tres
 res://mesh_libraries/floorTiles.tres
 res://mesh_libraries/stairTiles.tres
 res://mesh_libraries/wallTiles.tres
-res://flameGradient.tres
-res://smokeGradient.tres
 res://addons/quaternius simple nature pack/materials/leaves.tres
 res://addons/quaternius simple nature pack/meshes/bush_3.res
+res://particle_things/flameGradient.tres
+res://particle_things/smokeGradient.tres
+res://default_env.tres
 res://game_scenes/test_scene.tscn
-res://scripts/core/CameraRig.cs
-res://scripts/core/InputReader.cs
-res://scripts/statemachines/PlayerStateMachine.cs
-res://scripts/statemachines/StateMachine.cs
-res://scripts/statemachines/states/enemies/shared/EnemyStateMachine.cs
-res://scripts/statemachines/states/enemies/slime/SlimeStateMachine.cs
 res://game/characters/slimeMonster.tscn
-res://scripts/statemachines/EnemyStateMachine.cs
-res://scripts/statemachines/SlimeStateMachine.cs
