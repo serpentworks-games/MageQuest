@@ -1,53 +1,56 @@
 using Godot;
 
-public partial class CameraRig : Node3D
+namespace MageQuest.Core
 {
-    [Export] public float MouseSensitivity { get; private set; } = 5;
-    [Export] public float UpperRotationLimit { get; private set; } = -0.75f;
-    [Export] public float LowerRotationLimit { get; private set; } = 0.25f;
-    [Export] public float MinCameraZoom { get; private set; } = 5;
-    [Export] public float MaxCameraZoom { get; private set; } = 10;
-
-    public SpringArm3D SpringArm3D { get; private set; }
-
-    public override void _Ready()
+    public partial class CameraRig : Node3D
     {
-        Input.MouseMode = Input.MouseModeEnum.Captured;
-        SpringArm3D = (SpringArm3D)GetNode("SpringArm3D");
-    }
+        [Export] public float MouseSensitivity { get; private set; } = 5;
+        [Export] public float UpperRotationLimit { get; private set; } = -0.75f;
+        [Export] public float LowerRotationLimit { get; private set; } = 0.25f;
+        [Export] public float MinCameraZoom { get; private set; } = 5;
+        [Export] public float MaxCameraZoom { get; private set; } = 10;
 
-    public override void _Process(double delta)
-    {
-        GlobalPosition = GetParentNode3D().GlobalPosition;
-    }
+        public SpringArm3D SpringArm3D { get; private set; }
 
-    public override void _Input(InputEvent @event)
-    {
-        if (@event is InputEventMouseMotion eventMouseMotion)
+        public override void _Ready()
         {
-            float xRot = Mathf.Clamp(
-                Rotation.X - eventMouseMotion.Relative.Y /
-                1000 * MouseSensitivity, UpperRotationLimit, LowerRotationLimit
-                );
-            float yRot = Rotation.Y - eventMouseMotion.Relative.X / 1000 * MouseSensitivity;
-            Rotation = new Vector3(xRot, yRot, 0);
+            Input.MouseMode = Input.MouseModeEnum.Captured;
+            SpringArm3D = (SpringArm3D)GetNode("SpringArm3D");
         }
 
-        if (@event is InputEventMouseButton eventMouseButton)
+        public override void _Process(double delta)
         {
-            if ((int)eventMouseButton.ButtonIndex == 4) //Scroll wheel
+            GlobalPosition = GetParentNode3D().GlobalPosition;
+        }
+
+        public override void _Input(InputEvent @event)
+        {
+            if (@event is InputEventMouseMotion eventMouseMotion)
             {
-                if (SpringArm3D.SpringLength < MaxCameraZoom)
-                {
-                    SpringArm3D.SpringLength += 0.1f;
-                }
+                float xRot = Mathf.Clamp(
+                    Rotation.X - eventMouseMotion.Relative.Y /
+                    1000 * MouseSensitivity, UpperRotationLimit, LowerRotationLimit
+                    );
+                float yRot = Rotation.Y - eventMouseMotion.Relative.X / 1000 * MouseSensitivity;
+                Rotation = new Vector3(xRot, yRot, 0);
             }
 
-            if ((int)eventMouseButton.ButtonIndex == 5) //Scroll wheel
+            if (@event is InputEventMouseButton eventMouseButton)
             {
-                if (SpringArm3D.SpringLength > MinCameraZoom)
+                if ((int)eventMouseButton.ButtonIndex == 4) //Scroll wheel
                 {
-                    SpringArm3D.SpringLength -= 0.1f;
+                    if (SpringArm3D.SpringLength < MaxCameraZoom)
+                    {
+                        SpringArm3D.SpringLength += 0.1f;
+                    }
+                }
+
+                if ((int)eventMouseButton.ButtonIndex == 5) //Scroll wheel
+                {
+                    if (SpringArm3D.SpringLength > MinCameraZoom)
+                    {
+                        SpringArm3D.SpringLength -= 0.1f;
+                    }
                 }
             }
         }

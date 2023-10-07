@@ -1,18 +1,21 @@
 using System.Diagnostics;
 using Godot;
 
-public abstract class PlayerBaseState : State
+namespace MageQuest.StateMachines.States
 {
-    protected PlayerStateMachine stateMachine;
-
-    public PlayerBaseState(PlayerStateMachine stateMachine)
+    public abstract class PlayerBaseState : State
     {
-        this.stateMachine = stateMachine;
-    }
+        protected PlayerStateMachine stateMachine;
 
-    protected void Move(Vector3 motion, float moveSpeed)
-    {
-        stateMachine.Body3D.Velocity = (motion + stateMachine.ForceHandler.Movement) * moveSpeed;
-        stateMachine.Body3D.MoveAndSlide();
+        public PlayerBaseState(PlayerStateMachine stateMachine)
+        {
+            this.stateMachine = stateMachine;
+        }
+
+        protected void Move(Vector3 motion, float moveSpeed)
+        {
+            stateMachine.Body3D.Velocity = (motion + stateMachine.ForceHandler.Movement) * moveSpeed;
+            stateMachine.Body3D.MoveAndSlide();
+        }
     }
 }

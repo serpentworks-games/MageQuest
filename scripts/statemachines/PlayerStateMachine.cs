@@ -1,45 +1,50 @@
 using System.Security.Cryptography.X509Certificates;
 using Godot;
+using MageQuest.Core;
+using MageQuest.StateMachines.States;
 
-public partial class PlayerStateMachine : StateMachine
+namespace MageQuest.StateMachines
 {
-    //Public Configs
-    [Export] public float MoveSpeed { get; private set; } = 6f;
-    [Export] public float RotationSpeed { get; private set; } = 20f;
-    [Export] public float AnimLerpDampTime { get; private set; } = 0.05f;
-
-    //Refs
-    public InputReader InputReader { get; private set; }
-    public CharacterBody3D Body3D { get; private set; }
-    public CameraRig CameraRig { get; private set; }
-    public Node3D CharacterMesh { get; private set; }
-    public AnimationTree AnimationTree { get; private set; }
-    public ForceHandler ForceHandler { get; private set; }
-
-    public override void _Ready()
+    public partial class PlayerStateMachine : StateMachine
     {
-        InitRefs();
+        //Public Configs
+        [Export] public float MoveSpeed { get; private set; } = 6f;
+        [Export] public float RotationSpeed { get; private set; } = 20f;
+        [Export] public float AnimLerpDampTime { get; private set; } = 0.05f;
 
-        SwitchState(new PlayerMoveState(this));
-    }
+        //Refs
+        public InputReader InputReader { get; private set; }
+        public CharacterBody3D Body3D { get; private set; }
+        public CameraRig CameraRig { get; private set; }
+        public Node3D CharacterMesh { get; private set; }
+        public AnimationTree AnimationTree { get; private set; }
+        public ForceHandler ForceHandler { get; private set; }
 
-    public override void _Process(double delta)
-    {
-        base._Process(delta);
-    }
+        public override void _Ready()
+        {
+            InitRefs();
 
-    public override void _PhysicsProcess(double delta)
-    {
-        base._PhysicsProcess(delta);
-    }
+            SwitchState(new PlayerMoveState(this));
+        }
 
-    private void InitRefs()
-    {
-        InputReader = (InputReader)GetNode("../InputReader");
-        Body3D = (CharacterBody3D)GetParent();
-        CameraRig = (CameraRig)GetNode("../CamRig");
-        CharacterMesh = (Node3D)GetNode("../Rig");
-        AnimationTree = (AnimationTree)GetNode("../AnimationTree");
-        ForceHandler = (ForceHandler)GetNode("../ForceHandler");
+        public override void _Process(double delta)
+        {
+            base._Process(delta);
+        }
+
+        public override void _PhysicsProcess(double delta)
+        {
+            base._PhysicsProcess(delta);
+        }
+
+        private void InitRefs()
+        {
+            InputReader = (InputReader)GetNode("../InputReader");
+            Body3D = (CharacterBody3D)GetParent();
+            CameraRig = (CameraRig)GetNode("../CamRig");
+            CharacterMesh = (Node3D)GetNode("../Rig");
+            AnimationTree = (AnimationTree)GetNode("../AnimationTree");
+            ForceHandler = (ForceHandler)GetNode("../ForceHandler");
+        }
     }
 }

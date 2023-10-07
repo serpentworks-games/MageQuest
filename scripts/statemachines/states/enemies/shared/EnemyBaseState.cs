@@ -1,9 +1,12 @@
-public abstract class EnemyBaseState : State
+namespace MageQuest.StateMachines.States
 {
-    protected EnemyStateMachine stateMachine;
-
-    public EnemyBaseState(EnemyStateMachine stateMachine)
+    public abstract class EnemyBaseState : State
     {
-        this.stateMachine = stateMachine;
+        protected EnemyStateMachine stateMachine;
+
+        public EnemyBaseState(EnemyStateMachine stateMachine)
+        {
+            this.stateMachine = stateMachine;
+        }
     }
 }

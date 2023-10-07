@@ -1,10 +1,13 @@
-public abstract class State
+namespace MageQuest.StateMachines.States
 {
-    public abstract void EnterState();
+    public abstract class State
+    {
+        public abstract void EnterState();
 
-    public abstract void TickState(float deltaTime);
+        public abstract void TickState(float deltaTime);
 
-    public abstract void TickPhysicsState(float deltaTime);
+        public abstract void TickPhysicsState(float deltaTime);
 
-    public abstract void ExitState();
+        public abstract void ExitState();
+    }
 }

@@ -1,26 +1,30 @@
 using Godot;
+using MageQuest.Utils;
 
-public partial class ForceHandler : Node
+namespace MageQuest.Core
 {
-    float verticalVelocity;
-
-    public Vector3 Movement => Vector3.Up * verticalVelocity;
-    public CharacterBody3D Body3D { get; private set; }
-
-    public override void _Ready()
+    public partial class ForceHandler : Node
     {
-        Body3D = (CharacterBody3D)GetParent();
-    }
+        float verticalVelocity;
 
-    public override void _PhysicsProcess(double delta)
-    {
-        if ((verticalVelocity < 0f) && Body3D.IsOnFloor())
+        public Vector3 Movement => Vector3.Up * verticalVelocity;
+        public CharacterBody3D Body3D { get; private set; }
+
+        public override void _Ready()
         {
-            verticalVelocity = 0f;
+            Body3D = (CharacterBody3D)GetParent();
         }
-        else
+
+        public override void _PhysicsProcess(double delta)
         {
-            verticalVelocity -= (float)ProjectSettings.GetSetting(StringRefs.GravityPath) * (float)delta;
+            if ((verticalVelocity < 0f) && Body3D.IsOnFloor())
+            {
+                verticalVelocity = 0f;
+            }
+            else
+            {
+                verticalVelocity -= (float)ProjectSettings.GetSetting(StringRefs.GravityPath) * (float)delta;
+            }
         }
     }
 }
