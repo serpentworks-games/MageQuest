@@ -369,3 +369,9 @@ $RECYCLE.BIN/
 *.msm
 *.msp
 *.lnk
+*.cache
+*.pdb
+*.cfg
+*.dll
+*.pdb
+*.cache
