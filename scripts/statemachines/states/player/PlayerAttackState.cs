@@ -1,17 +1,21 @@
+using System;
 using Godot;
+using MageQuest.Combat;
 using MageQuest.Utils;
 
 namespace MageQuest.StateMachines.States
 {
     class PlayerAttackState : PlayerBaseState
     {
-        public PlayerAttackState(PlayerStateMachine stateMachine) : base(stateMachine)
+        readonly AttackData attackData;
+        public PlayerAttackState(PlayerStateMachine stateMachine, int attackIndex) : base(stateMachine)
         {
+            attackData = stateMachine.Attacks[attackIndex];
         }
 
         public override void EnterState()
         {
-            stateMachine.AnimationTree.Set(StringRefs.AnimTreeAttackTriggerRequestParam, (int)AnimationNodeOneShot.OneShotRequest.Fire);
+            stateMachine.AnimationTree.Set(attackData.TriggerRequestParamPath, (int)AnimationNodeOneShot.OneShotRequest.Fire);
         }
 
         public override void TickPhysicsState(float deltaTime)
@@ -21,8 +25,7 @@ namespace MageQuest.StateMachines.States
 
         public override void TickState(float deltaTime)
         {
-            int stateEnumIndex = (int)stateMachine.AnimationTree.Get(StringRefs.AnimTreeAttackTriggerRequestParam);
-            if (stateEnumIndex == (int)AnimationNodeOneShot.OneShotRequest.None)
+            if (!(bool)stateMachine.AnimationTree.Get(attackData.TriggerActiveParamPath))
             {
                 stateMachine.SwitchState(new PlayerMoveState(stateMachine));
             }
@@ -32,5 +35,6 @@ namespace MageQuest.StateMachines.States
         {
 
         }
+
     }
 }

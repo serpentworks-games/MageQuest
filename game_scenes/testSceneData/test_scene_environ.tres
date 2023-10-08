@@ -1,7 +1,8 @@
 [gd_resource type="Environment" format=3 uid="uid://b4tk6fdnocht4"]
 
 [resource]
-background_mode = 1
+background_energy_multiplier = 1.82
+sky_rotation = Vector3(0, 1.1205, 0)
 ambient_light_source = 2
 ambient_light_color = Color(0.776471, 0.839216, 0.909804, 1)
 tonemap_mode = 2
@@ -22,4 +23,7 @@ glow_normalized = true
 glow_intensity = 0.71
 glow_strength = 0.74
 glow_blend_mode = 0
-volumetric_fog_density = 0.0221
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.0412
+volumetric_fog_detail_spread = 4.43828
+volumetric_fog_ambient_inject = 0.77

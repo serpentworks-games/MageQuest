@@ -12,10 +12,9 @@ namespace MageQuest.StateMachines.States
             this.stateMachine = stateMachine;
         }
 
-        protected void Move(Vector3 motion, float moveSpeed)
+        protected void ApplyForces(Vector3 motion, float moveSpeed)
         {
             stateMachine.Body3D.Velocity = (motion + stateMachine.ForceHandler.Movement) * moveSpeed;
-            stateMachine.Body3D.MoveAndSlide();
         }
     }
 }

@@ -15,7 +15,6 @@ namespace MageQuest.Utils
 
         //Anim Params
         public static string AnimTreeVelocityBlendParam => "parameters/velocity/blend_amount";
-        public static string AnimTreeDeathTriggerRequestParam => "parameters/deathTrigger/request";
-        public static string AnimTreeAttackTriggerRequestParam => "parameters/attackTrigger/request";
+        public static string AnimTreeDeathTriggerRequestParam => "parameters/DeathTrigger/request";
     }
 }

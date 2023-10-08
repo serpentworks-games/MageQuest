@@ -1,5 +1,8 @@
+using System;
+using System.Collections.Generic;
 using System.Security.Cryptography.X509Certificates;
 using Godot;
+using MageQuest.Combat;
 using MageQuest.Core;
 using MageQuest.StateMachines.States;
 
@@ -8,9 +11,14 @@ namespace MageQuest.StateMachines
     public partial class PlayerStateMachine : StateMachine
     {
         //Public Configs
+        [ExportGroup("Base Variables")]
         [Export] public float MoveSpeed { get; private set; } = 6f;
         [Export] public float RotationSpeed { get; private set; } = 20f;
         [Export] public float AnimLerpDampTime { get; private set; } = 0.05f;
+
+        [ExportGroup("Attack Variables")]
+        [Export] public AttackData[] Attacks { get; private set; }
+
 
         //Refs
         public InputReader InputReader { get; private set; }
@@ -18,7 +26,9 @@ namespace MageQuest.StateMachines
         public CameraRig CameraRig { get; private set; }
         public Node3D CharacterMesh { get; private set; }
         public AnimationTree AnimationTree { get; private set; }
+        public AnimationPlayer AnimationPlayer { get; private set; }
         public ForceHandler ForceHandler { get; private set; }
+
 
         public override void _Ready()
         {
@@ -45,6 +55,7 @@ namespace MageQuest.StateMachines
             CharacterMesh = (Node3D)GetNode("../Rig");
             AnimationTree = (AnimationTree)GetNode("../AnimationTree");
             ForceHandler = (ForceHandler)GetNode("../ForceHandler");
+            AnimationPlayer = (AnimationPlayer)GetNode("../AnimationPlayer");
         }
     }
 }

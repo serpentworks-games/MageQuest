@@ -31,14 +31,15 @@ namespace MageQuest.StateMachines.States
         {
             if (stateMachine.InputReader.IsAttackPressed)
             {
-                stateMachine.SwitchState(new PlayerAttackState(stateMachine));
+                stateMachine.SwitchState(new PlayerAttackState(stateMachine, 0));
                 return;
             }
             CalculateMovement();
 
             ApplyRotation(deltaTime, movement);
 
-            Move(movement, stateMachine.MoveSpeed);
+            ApplyForces(movement, stateMachine.MoveSpeed);
+            stateMachine.Body3D.MoveAndSlide();
         }
 
         public override void ExitState()
@@ -57,7 +58,6 @@ namespace MageQuest.StateMachines.States
                 Z = stateMachine.InputReader.MovementValue.Y
             };
             movement = movement.Rotated(Vector3.Up, camY).Normalized();
-            //stateMachine.Body3D.Velocity = movement;
         }
 
         private void ApplyRotation(float deltaTime, Vector3 movement)

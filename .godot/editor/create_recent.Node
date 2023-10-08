@@ -1,9 +1,10 @@
-Node
+Area3D
+RigidBody3D
 CollisionShape3D
+Node
 StaticBody3D
 MeshInstance3D
 Node3D
-RigidBody3D
 NavigationAgent3D
 AnimationTree
 NavigationObstacle3D
@@ -11,7 +12,6 @@ NavigationRegion3D
 SpringArm3D
 CharacterBody3D
 Camera3D
-Area3D
 BoneAttachment3D
 GPUParticles3D
 GridMap

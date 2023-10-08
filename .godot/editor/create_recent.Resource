@@ -1,3 +1,5 @@
+Resource
+CSharpScript
 Image
 World3D
 StandardMaterial3D
