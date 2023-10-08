@@ -34,6 +34,13 @@ namespace MageQuest.StateMachines.States
                 stateMachine.SwitchState(new PlayerAttackState(stateMachine, 0));
                 return;
             }
+
+            if(stateMachine.InputReader.IsShootPressed)
+            {
+                stateMachine.SwitchState(new PlayerAttackState(stateMachine, 1));
+                return;
+            }
+            
             CalculateMovement();
 
             ApplyRotation(deltaTime, movement);

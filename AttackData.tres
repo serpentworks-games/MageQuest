@@ -3,8 +3,7 @@
 [ext_resource type="Script" path="res://scripts/combat/AttackData.cs" id="1_m4tyu"]
 
 [resource]
-resource_name = "Staff Melee Attack"
 script = ExtResource("1_m4tyu")
-AttackName = "Staff Melee Attack"
-TriggerRequestParamPath = "parameters/Attack1Trigger/request"
-TriggerActiveParamPath = "parameters/Attack1Trigger/active"
+AttackName = ""
+TriggerRequestParamPath = ""
+TriggerActiveParamPath = ""

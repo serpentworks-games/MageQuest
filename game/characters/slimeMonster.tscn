@@ -600,7 +600,7 @@ mesh = SubResource("ArrayMesh_mlr0y")
 skin = SubResource("Skin_n8sdg")
 
 [node name="BoneAttachment3D" type="BoneAttachment3D" parent="Mesh/RootNode/Armature/Skeleton3D"]
-transform = Transform3D(-8.71718e-07, 0.266624, -0.963801, -1, -2.01166e-07, 8.83359e-07, 3.72529e-08, 0.963801, 0.266624, 0.000284099, 1.74623e-10, 0.0129134)
+transform = Transform3D(-8.17701e-07, 0.266624, -0.9638, -1, -2.01166e-07, 8.20495e-07, 1.49012e-08, 0.963801, 0.266624, 0.000284099, 1.74623e-10, 0.0129134)
 bone_name = "Head"
 bone_idx = 3
 

@@ -12,12 +12,14 @@ namespace MageQuest.Core
         [Export] public Vector2 MovementValue { get; private set; }
 
         public bool IsAttackPressed { get; private set; }
+        public bool IsShootPressed { get; private set; }
 
         public override void _Process(double delta)
         {
             OnJump();
             OnAttack();
             OnMove();
+            OnShoot();
         }
 
         public void OnJump()
@@ -39,6 +41,19 @@ namespace MageQuest.Core
             else
             {
                 IsAttackPressed = false;
+            }
+        }
+
+        public void OnShoot()
+        {
+            if (Input.IsActionPressed("shoot"))
+            {
+                Debug.Print("Shoot pressed!");
+                IsShootPressed = true;
+            }
+            else
+            {
+                IsShootPressed = false;
             }
         }
 
