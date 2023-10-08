@@ -5,12 +5,13 @@ namespace MageQuest.StateMachines
 {
     public partial class SlimeStateMachine : EnemyStateMachine
     {
-
-        [Export] public NavigationAgent3D agent;
         [Export] public Node3D pointToMoveTo;
+
+        public NavigationAgent3D Agent { get; private set; }
 
         public override void _Ready()
         {
+            Agent = (NavigationAgent3D)GetNode("../NavigationAgent3D");
             base._Ready();
             SwitchState(new SlimeIdleState(this));
         }
@@ -39,7 +40,7 @@ namespace MageQuest.StateMachines
         public override void _PhysicsProcess(double delta)
         {
             if (pointToMoveTo == null) { return; }
-            if (agent.TargetDesiredDistance < 1) { return; }
+            if (Agent.TargetDesiredDistance < 1) { return; }
 
             Vector3 direction = (pointToMoveTo.Position - CharacterBody3D.Position).Normalized();
 
@@ -54,7 +55,7 @@ namespace MageQuest.StateMachines
 
         private Vector3 CalculateVelocity(Vector3 direction)
         {
-            agent.TargetPosition = pointToMoveTo.Position;
+            Agent.TargetPosition = pointToMoveTo.Position;
             Vector3 velocity = CharacterBody3D.Velocity;
 
             velocity.X = direction.X * MoveSpeed;

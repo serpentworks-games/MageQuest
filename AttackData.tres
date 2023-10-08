@@ -3,7 +3,8 @@
 [ext_resource type="Script" path="res://scripts/combat/AttackData.cs" id="1_m4tyu"]
 
 [resource]
+resource_name = "AttackData"
 script = ExtResource("1_m4tyu")
-AttackName = ""
 TriggerRequestParamPath = ""
 TriggerActiveParamPath = ""
+AttackDamage = 0.0

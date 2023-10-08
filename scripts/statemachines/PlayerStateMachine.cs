@@ -11,13 +11,6 @@ namespace MageQuest.StateMachines
     public partial class PlayerStateMachine : StateMachine
     {
         //Public Configs
-        [ExportGroup("Base Variables")]
-        [Export] public float MoveSpeed { get; private set; } = 6f;
-        [Export] public float RotationSpeed { get; private set; } = 20f;
-        [Export] public float AnimLerpDampTime { get; private set; } = 0.05f;
-
-        [ExportGroup("Attack Variables")]
-        [Export] public AttackData[] Attacks { get; private set; }
 
 
         //Refs

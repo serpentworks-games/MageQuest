@@ -1,4 +1,5 @@
 using Godot;
+using MageQuest.Combat;
 using System;
 
 namespace MageQuest.StateMachines
@@ -6,12 +7,10 @@ namespace MageQuest.StateMachines
     public partial class EnemyStateMachine : StateMachine
     {
         //Public Configs
-        [Export] public float MoveSpeed { get; private set; } = 4f;
-        [Export] public float RotationSpeed { get; private set; } = 20f;
-        [Export] public float MonsterHealth { get; private set; } = 10f;
+        [ExportCategory("StateMachine")]
+        [ExportGroup("Combat Variables")]
         [Export] public float ChaseDistance { get; private set; } = 5f;
         [Export] public float AttackRange { get; private set; } = 1f;
-        [Export] public Node3D EnemyMesh { get; private set; }
 
         //State
         public bool CanChasePlayer { get; private set; }
@@ -19,6 +18,7 @@ namespace MageQuest.StateMachines
 
         //Refs
         public AnimationTree AnimationTree { get; private set; }
+        public Node3D EnemyMesh { get; private set; }
         public CharacterBody3D CharacterBody3D { get; private set; }
         public CharacterBody3D PlayerBody3D { get; private set; }
 
@@ -28,6 +28,7 @@ namespace MageQuest.StateMachines
             AnimationTree = (AnimationTree)GetNode("../AnimationTree");
             CharacterBody3D = (CharacterBody3D)GetParent();
             PlayerBody3D = (CharacterBody3D)GetNode("../../../Characters/Player");
+            EnemyMesh = (Node3D)GetNode("../Mesh");
 
         }
 
