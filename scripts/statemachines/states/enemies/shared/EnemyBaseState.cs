@@ -1,10 +1,13 @@
+using System.Numerics;
 using Godot;
+using Vector3 = Godot.Vector3;
 
 namespace MageQuest.StateMachines.States
 {
     public abstract class EnemyBaseState : State
     {
         protected EnemyStateMachine stateMachine;
+        Vector3 movement;
 
         public EnemyBaseState(EnemyStateMachine stateMachine)
         {
@@ -41,7 +44,7 @@ namespace MageQuest.StateMachines.States
             stateMachine.Body3D.Velocity = velocity;
 
             ApplyRotation(deltaTime, direction);
-
+            ApplyForces(direction, stateMachine.MoveSpeed);
             stateMachine.Body3D.MoveAndSlide();
         }
 
@@ -57,7 +60,7 @@ namespace MageQuest.StateMachines.States
         protected void ApplyRotation(double delta, Vector3 direction)
         {
             Vector3 rotation = stateMachine.CharacterMesh.Rotation;
-            float arcTangent = Mathf.Atan2(direction.Z, direction.X);
+            float arcTangent = Mathf.Atan2(direction.X, direction.Z);
 
             rotation.Y = Mathf.LerpAngle(
                 stateMachine.CharacterMesh.Rotation.Y,

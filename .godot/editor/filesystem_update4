@@ -1,6 +1,7 @@
 res://scripts/combat/AttackData.cs
+res://scripts/combat/CharacterStats.cs
 res://scripts/combat/Damager.cs
-res://scripts/combat/HealthData.cs
+res://scripts/combat/WeaponHandler.cs
 res://scripts/core/CameraRig.cs
 res://scripts/core/ForceHandler.cs
 res://scripts/core/InputReader.cs
@@ -11,6 +12,7 @@ res://scripts/statemachines/StateMachine.cs
 res://game_scenes/test_scene.tscn
 res://addons/kaykit_dungeon_remastered/Assets/texture/baseMat.tres
 res://mesh_libraries/floorTiles.tres
+res://game_scenes/testSceneData/test_scene_environ.tres
 res://mesh_libraries/stairTiles.tres
 res://mesh_libraries/wallTiles.tres
 res://particle_things/flameGradient.tres
@@ -19,8 +21,3 @@ res://addons/quaternius simple nature pack/materials/leaves.tres
 res://addons/quaternius simple nature pack/meshes/bush_3.res
 res://game/characters/slimeMonster.tscn
 res://game/characters/player_updated.tscn
-res://scripts/combat/CharacterStats.cs
-res://game_scenes/testSceneData/test_scene_environ.tres
-res://scripts/combat/WeaponHandler.cs
-res://game/door.tscn
-res://addons/enemy_gizmos/EnemyGizmos.cs

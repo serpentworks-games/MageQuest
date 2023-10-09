@@ -14,11 +14,6 @@ namespace MageQuest.StateMachines.States
             stateMachine.AnimationTree.Set(StringRefs.AnimTreeVelocityBlendParam, 1f);
         }
 
-        public override void ExitState()
-        {
-
-        }
-
         public override void TickPhysicsState(float deltaTime)
         {
             if (IsInAttackRange())
@@ -36,6 +31,11 @@ namespace MageQuest.StateMachines.States
         }
 
         public override void TickState(float deltaTime)
+        {
+
+        }
+
+        public override void ExitState()
         {
 
         }

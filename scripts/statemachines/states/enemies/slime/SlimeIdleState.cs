@@ -1,6 +1,7 @@
 using Godot;
 using MageQuest.Utils;
 using System;
+using System.Diagnostics;
 
 namespace MageQuest.StateMachines.States
 {

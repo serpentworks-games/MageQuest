@@ -14,7 +14,8 @@ namespace MageQuest.Utils
         public static string GravityPath => "physics/3d/default_gravity";
 
         //Anim Params
-        public static string AnimTreeVelocityBlendParam => "parameters/velocity/blend_amount";
+        public static string AnimTreeVelocityBlendParam => "parameters/Velocity/blend_amount";
         public static string AnimTreeDeathTriggerRequestParam => "parameters/DeathTrigger/request";
+        public static string AnimTreeDeathTriggerActiveParam => "parameters/DeathTrigger/active";
     }
 }

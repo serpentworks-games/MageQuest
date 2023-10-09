@@ -13,6 +13,10 @@ namespace MageQuest.StateMachines
 
         public override void _Process(double delta)
         {
+            if (CharacterStats.GetCurrentHealth() == 0)
+            {
+                SwitchState(new SlimeDeathState(this));
+            }
             base._Process(delta);
         }
 
