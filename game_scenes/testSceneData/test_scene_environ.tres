@@ -23,7 +23,6 @@ glow_normalized = true
 glow_intensity = 0.71
 glow_strength = 0.74
 glow_blend_mode = 0
-volumetric_fog_enabled = true
 volumetric_fog_density = 0.0412
 volumetric_fog_detail_spread = 4.43828
 volumetric_fog_ambient_inject = 0.77

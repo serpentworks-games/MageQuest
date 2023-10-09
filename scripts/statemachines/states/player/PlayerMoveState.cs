@@ -35,12 +35,12 @@ namespace MageQuest.StateMachines.States
                 return;
             }
 
-            if(stateMachine.InputReader.IsShootPressed)
+            if (stateMachine.InputReader.IsShootPressed)
             {
                 stateMachine.SwitchState(new PlayerAttackState(stateMachine, 1));
                 return;
             }
-            
+
             CalculateMovement();
 
             ApplyRotation(deltaTime, movement);

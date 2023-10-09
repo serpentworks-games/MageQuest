@@ -73,6 +73,7 @@ shoot={
 3d_navigation/layer_1="Walkable"
 3d_physics/layer_2="Enemy"
 3d_navigation/layer_2="NotWalkable"
+3d_physics/layer_3="Environ"
 
 [rendering]
 

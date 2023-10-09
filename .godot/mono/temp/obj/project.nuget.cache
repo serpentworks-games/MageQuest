@@ -1,15 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "Y5kE8vHamGZu/Ivxl3W/cHNyyL3LTWlQLCtfIAy2TJqJH5NZC10ICAngSfDyjrF0e4s1VekErxuWeIOxODr8JA==",
+  "dgSpecHash": "ZrsDIMitqIW6c9q/teuwuNYOEG6y38BvgobFyEXm6PfxI7IlTRUJ14KmodsyJ+xJDfZSXzELpF5FBxqihZSt1g==",
   "success": true,
-  "projectFilePath": "D:\\GameDev\\GodotProjects\\MageQuest\\MageQuest.csproj",
+  "projectFilePath": "E:\\GameDev\\MageQuest\\MageQuest.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Rin\\.nuget\\packages\\godot.sourcegenerators\\4.1.1\\godot.sourcegenerators.4.1.1.nupkg.sha512",
-    "C:\\Users\\Rin\\.nuget\\packages\\godotsharp\\4.1.1\\godotsharp.4.1.1.nupkg.sha512",
-    "C:\\Users\\Rin\\.nuget\\packages\\godotsharpeditor\\4.1.1\\godotsharpeditor.4.1.1.nupkg.sha512",
-    "C:\\Users\\Rin\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.14\\microsoft.netcore.app.ref.6.0.14.nupkg.sha512",
-    "C:\\Users\\Rin\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.14\\microsoft.windowsdesktop.app.ref.6.0.14.nupkg.sha512",
-    "C:\\Users\\Rin\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.14\\microsoft.aspnetcore.app.ref.6.0.14.nupkg.sha512"
+    "C:\\Users\\alexi\\.nuget\\packages\\godot.sourcegenerators\\4.1.1\\godot.sourcegenerators.4.1.1.nupkg.sha512",
+    "C:\\Users\\alexi\\.nuget\\packages\\godotsharp\\4.1.1\\godotsharp.4.1.1.nupkg.sha512",
+    "C:\\Users\\alexi\\.nuget\\packages\\godotsharpeditor\\4.1.1\\godotsharpeditor.4.1.1.nupkg.sha512"
   ],
   "logs": []
 }

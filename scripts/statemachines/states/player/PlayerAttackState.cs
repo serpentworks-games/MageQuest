@@ -15,6 +15,7 @@ namespace MageQuest.StateMachines.States
 
         public override void EnterState()
         {
+            stateMachine.Weapon.SetWeaponDamage(attackData.AttackDamage);
             stateMachine.AnimationTree.Set(attackData.TriggerRequestParamPath, (int)AnimationNodeOneShot.OneShotRequest.Fire);
         }
 

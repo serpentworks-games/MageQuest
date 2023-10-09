@@ -22,10 +22,16 @@ namespace MageQuest.StateMachines.States
 
         public override void TickState(float deltaTime)
         {
-            if (stateMachine.CanAttackPlayer)
+            if (IsInAttackRange())
+            {
                 stateMachine.SwitchState(new SlimeAttackState(stateMachine));
-            else if (stateMachine.CanChasePlayer)
+                return;
+            }
+            if (IsInChaseRange())
+            {
                 stateMachine.SwitchState(new SlimeChaseState(stateMachine));
+                return;
+            }
         }
 
         public override void ExitState()

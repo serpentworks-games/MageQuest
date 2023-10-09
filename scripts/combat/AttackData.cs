@@ -9,9 +9,6 @@ namespace MageQuest.Combat
         [Export] public string TriggerActiveParamPath { get; private set; } = "";
 
         [ExportGroup("Damage, Collision, Projectiles")]
-        [Export] public float AttackDamage { get; private set; }
-        [Export] public Area3D AttackCollisionArea { get; private set; }
-        [Export] public Node3D ProjectileEmitLocation { get; private set; }
-
+        [Export] public int AttackDamage { get; private set; }
     }
 }
