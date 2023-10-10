@@ -16,5 +16,10 @@ namespace MageQuest.StateMachines.States
         {
             stateMachine.Body3D.Velocity = (motion + stateMachine.ForceHandler.Movement) * moveSpeed;
         }
+
+        protected void ReturnToMovement()
+        {
+            stateMachine.SwitchState(new PlayerMoveState(stateMachine));
+        }
     }
 }

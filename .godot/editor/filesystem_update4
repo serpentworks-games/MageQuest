@@ -1,4 +1,3 @@
-res://game_scenes/test_scene.tscn
 res://addons/kaykit_dungeon_remastered/Assets/texture/baseMat.tres
 res://mesh_libraries/floorTiles.tres
 res://game_scenes/testSceneData/test_scene_environ.tres
@@ -8,8 +7,10 @@ res://particle_things/flameGradient.tres
 res://particle_things/smokeGradient.tres
 res://addons/quaternius simple nature pack/materials/leaves.tres
 res://addons/quaternius simple nature pack/meshes/bush_3.res
+res://game_scenes/test_scene.tscn
 res://game/characters/slimeMonster.tscn
 res://game/characters/player_updated.tscn
+res://ui/main_hud.tscn
 res://scripts/combat/AttackData.cs
 res://scripts/combat/CharacterStats.cs
 res://scripts/combat/Damager.cs

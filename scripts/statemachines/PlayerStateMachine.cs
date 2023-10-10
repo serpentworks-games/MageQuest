@@ -15,8 +15,9 @@ namespace MageQuest.StateMachines
 
         public override void _Ready()
         {
-            SwitchState(new PlayerMoveState(this));
             base._Ready();
+            SwitchState(new PlayerMoveState(this));
+            CharacterStats.OnDamageApplied += HandleImpacts;
         }
 
         public override void _Process(double delta)
@@ -27,6 +28,11 @@ namespace MageQuest.StateMachines
         public override void _PhysicsProcess(double delta)
         {
             base._PhysicsProcess(delta);
+        }
+
+        private void HandleImpacts()
+        {
+            SwitchState(new PlayerImpactState(this));
         }
 
         public override void InitRefs()

@@ -1,12 +1,8 @@
-using System.Collections;
-using System.Diagnostics;
-using System.Runtime.CompilerServices;
 using Godot;
 using MageQuest.StateMachines;
-using MageQuest.StateMachines.States;
 using MageQuest.Utils;
 
-class SlimeDeathState : EnemyBaseState
+class SlimeDeathState : EnemyDeathState
 {
     public SlimeDeathState(EnemyStateMachine stateMachine) : base(stateMachine)
     {
@@ -14,29 +10,21 @@ class SlimeDeathState : EnemyBaseState
 
     public override void EnterState()
     {
-        stateMachine.AnimationTree.Set(StringRefs.AnimTreeDeathTriggerRequestParam, (int)AnimationNodeOneShot.OneShotRequest.Fire);
+        base.EnterState();
     }
 
     public override void TickPhysicsState(float deltaTime)
     {
-
+        base.TickPhysicsState(deltaTime);
     }
 
     public override void TickState(float deltaTime)
     {
-        SceneTreeTimer deathAnimTimer = stateMachine.GetTree().CreateTimer(0.4f); //hiss magic number hiss!!
-        deathAnimTimer.Timeout += DisableNodes;
-
+        base.TickState(deltaTime);
     }
 
     public override void ExitState()
     {
-
-    }
-
-    private void DisableNodes()
-    {
-        stateMachine.Body3D.Visible = false;
-        stateMachine.Body3D.ProcessMode = Node.ProcessModeEnum.Disabled;
+        base.ExitState();
     }
 }

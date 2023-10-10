@@ -5,7 +5,7 @@ using System.Diagnostics;
 
 namespace MageQuest.StateMachines.States
 {
-    public partial class SlimeIdleState : EnemyBaseState
+    public partial class SlimeIdleState : EnemyIdleState
     {
         public SlimeIdleState(EnemyStateMachine stateMachine) : base(stateMachine)
         {
@@ -13,31 +13,22 @@ namespace MageQuest.StateMachines.States
 
         public override void EnterState()
         {
-            stateMachine.AnimationTree.Set(StringRefs.AnimTreeVelocityBlendParam, 0f);
-        }
-
-        public override void TickPhysicsState(float deltaTime)
-        {
-
+            base.EnterState();
         }
 
         public override void TickState(float deltaTime)
         {
-            if (IsInAttackRange())
-            {
-                stateMachine.SwitchState(new SlimeAttackState(stateMachine));
-                return;
-            }
-            if (IsInChaseRange())
-            {
-                stateMachine.SwitchState(new SlimeChaseState(stateMachine));
-                return;
-            }
+            base.TickState(deltaTime);
+        }
+
+        public override void TickPhysicsState(float deltaTime)
+        {
+            base.TickPhysicsState(deltaTime);
         }
 
         public override void ExitState()
         {
-
+            base.ExitState();
         }
     }
 }

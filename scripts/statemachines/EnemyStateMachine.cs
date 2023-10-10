@@ -1,4 +1,6 @@
+using System;
 using Godot;
+using MageQuest.StateMachines.States;
 
 namespace MageQuest.StateMachines
 {
@@ -8,6 +10,10 @@ namespace MageQuest.StateMachines
         [ExportGroup("Enemy Specific Variables")]
         [Export] public float ChaseDistance { get; private set; } = 5f;
         [Export] public float AttackRange { get; private set; } = 1f;
+        [Export] public float SuspicionWaitTime { get; private set; }
+
+        [ExportGroup("Patrol Variables")]
+        [Export] public float WaypointDwellTime { get; private set; }
 
         //State
         public bool CanChasePlayer { get; private set; }
@@ -23,6 +29,12 @@ namespace MageQuest.StateMachines
         {
             base._Ready();
             GuardPosition = Body3D.GlobalPosition;
+            CharacterStats.OnDamageApplied += HandleImpacts;
+        }
+
+        private void HandleImpacts()
+        {
+            SwitchState(new EnemyImpactState(this));
         }
 
         public override void _PhysicsProcess(double delta)

@@ -8,7 +8,6 @@ namespace MageQuest.StateMachines.States
     public abstract class EnemyBaseState : State
     {
         protected EnemyStateMachine stateMachine;
-        Vector3 movement;
 
         public EnemyBaseState(EnemyStateMachine stateMachine)
         {
@@ -64,7 +63,7 @@ namespace MageQuest.StateMachines.States
             var nextPos = stateMachine.Agent.GetNextPathPosition();
             var currentPos = stateMachine.Body3D.GlobalPosition;
             var newVelocity = (nextPos - currentPos).Normalized() * stateMachine.MoveSpeed;
-            if(stateMachine.Agent.AvoidanceEnabled)
+            if (stateMachine.Agent.AvoidanceEnabled)
                 stateMachine.Agent.Velocity = newVelocity;
             else
                 OnVelocityComputed(newVelocity);

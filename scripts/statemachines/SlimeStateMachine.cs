@@ -7,6 +7,7 @@ namespace MageQuest.StateMachines
 {
     public partial class SlimeStateMachine : EnemyStateMachine
     {
+        bool isDead;
         public override void _Ready()
         {
             base._Ready();
@@ -15,10 +16,10 @@ namespace MageQuest.StateMachines
 
         public override void _Process(double delta)
         {
-            if (CharacterStats.GetCurrentHealth() == 0)
+            if (CharacterStats.GetCurrentHealth() == 0 && isDead == false)
             {
                 SwitchState(new SlimeDeathState(this));
-                return;
+                isDead = true;
             }
 
             base._Process(delta);

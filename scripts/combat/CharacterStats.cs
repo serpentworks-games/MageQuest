@@ -6,6 +6,8 @@ namespace MageQuest.Combat
     {
         [Export] public int MaxHealth { get; private set; }
 
+        public event Action OnDamageApplied;
+
         int currentHealth;
         bool isDead;
 
@@ -19,6 +21,8 @@ namespace MageQuest.Combat
             if (currentHealth == 0) { return; }
 
             currentHealth = Mathf.Max(currentHealth - damage, 0);
+
+            OnDamageApplied?.Invoke();
         }
 
         public int GetCurrentHealth()

@@ -10,5 +10,6 @@ namespace MageQuest.Combat
 
         [ExportGroup("Damage, Collision, Projectiles")]
         [Export] public int AttackDamage { get; private set; }
+        [Export] public float AttackSpeed { get; private set; }
     }
 }

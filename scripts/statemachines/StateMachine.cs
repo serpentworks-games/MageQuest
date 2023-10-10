@@ -15,6 +15,8 @@ namespace MageQuest.StateMachines
         [ExportGroup("Combat Variables")]
         [Export] public AttackData[] Attacks { get; private set; }
         [Export] public WeaponHandler Weapon { get; private set; }
+        [Export] public float ImpactStateTime { get; private set; }
+
 
         public CharacterStats CharacterStats { get; private set; }
         public CharacterBody3D Body3D { get; private set; }
