@@ -1,9 +1,13 @@
-[gd_scene load_steps=23 format=3 uid="uid://crp83jab1okt4"]
+[gd_scene load_steps=28 format=3 uid="uid://crp83jab1okt4"]
 
 [ext_resource type="Material" uid="uid://c20w3q1gt38xp" path="res://addons/kaykit_dungeon_remastered/Assets/texture/baseMat.tres" id="1_boi8h"]
-[ext_resource type="Texture2D" uid="uid://dsieibpnbunsw" path="res://flameGradient.tres" id="2_psvnn"]
+[ext_resource type="Texture2D" uid="uid://dsieibpnbunsw" path="res://particle_things/flameGradient.tres" id="2_psvnn"]
 [ext_resource type="Texture2D" uid="uid://bck5qvwp5optp" path="res://addons/kenney_particle_pack/fire_02.png" id="3_dj8do"]
-[ext_resource type="Texture2D" uid="uid://cccafem548mn2" path="res://smokeGradient.tres" id="4_5wb4w"]
+[ext_resource type="Texture2D" uid="uid://dal5q4dawnuxc" path="res://addons/kenney_particle_pack/flame_01.png" id="3_lu7i7"]
+[ext_resource type="Texture2D" uid="uid://cccafem548mn2" path="res://particle_things/smokeGradient.tres" id="4_5wb4w"]
+[ext_resource type="Texture2D" uid="uid://dv13jbgo1kef3" path="res://addons/kenney_particle_pack/flame_02.png" id="4_63l4j"]
+[ext_resource type="Texture2D" uid="uid://bq77kk185t04r" path="res://addons/kenney_particle_pack/flame_03.png" id="5_012rs"]
+[ext_resource type="Texture2D" uid="uid://bs4y7jrgshwlb" path="res://addons/kenney_particle_pack/flame_04.png" id="6_y05lj"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_xps71"]
 
@@ -84,12 +88,22 @@ turbulence_noise_scale = 4.66
 anim_speed_max = 1.0
 anim_offset_max = 1.0
 
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_dgagt"]
+frames = 4
+speed_scale = 0.3
+frame_0/texture = ExtResource("3_lu7i7")
+frame_1/texture = ExtResource("4_63l4j")
+frame_1/duration = 1.0
+frame_2/texture = ExtResource("5_012rs")
+frame_2/duration = 1.0
+frame_3/texture = ExtResource("6_y05lj")
+frame_3/duration = 1.0
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hjqdr"]
-transparency = 4
+transparency = 1
 blend_mode = 1
-shading_mode = 0
 vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("3_dj8do")
+albedo_texture = SubResource("AnimatedTexture_dgagt")
 billboard_mode = 3
 particles_anim_h_frames = 1
 particles_anim_v_frames = 1
@@ -130,6 +144,7 @@ shading_mode = 0
 vertex_color_use_as_albedo = true
 albedo_color = Color(1, 1, 1, 0.545098)
 albedo_texture = ExtResource("3_dj8do")
+albedo_texture_msdf = true
 billboard_mode = 3
 particles_anim_h_frames = 1
 particles_anim_v_frames = 1
@@ -147,12 +162,15 @@ mesh = SubResource("ArrayMesh_sl2x0")
 skeleton = NodePath("")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.647239, 0.385422)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.872361, 0.563913)
 light_color = Color(1, 0.721569, 0.52549, 1)
 light_energy = 1.711
+light_size = 0.2
 shadow_enabled = true
-omni_range = 6.242
-omni_attenuation = 0.901252
+shadow_opacity = 0.9
+shadow_blur = 0.0
+omni_range = 8.0
+omni_attenuation = 0.757858
 
 [node name="fireParticle" type="GPUParticles3D" parent="."]
 transform = Transform3D(0.1, 0, 0, 0, 0.0989196, -0.0146601, 0, 0.0146601, 0.0989196, 0.0546594, 0.639588, 0.487269)

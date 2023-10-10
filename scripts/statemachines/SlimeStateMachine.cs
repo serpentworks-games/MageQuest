@@ -1,3 +1,5 @@
+using System.Diagnostics;
+using System.Linq;
 using Godot;
 using MageQuest.StateMachines.States;
 
@@ -16,7 +18,9 @@ namespace MageQuest.StateMachines
             if (CharacterStats.GetCurrentHealth() == 0)
             {
                 SwitchState(new SlimeDeathState(this));
+                return;
             }
+
             base._Process(delta);
         }
 

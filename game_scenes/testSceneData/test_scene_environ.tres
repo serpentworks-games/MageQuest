@@ -1,12 +1,6 @@
 [gd_resource type="Environment" format=3 uid="uid://b4tk6fdnocht4"]
 
 [resource]
-background_energy_multiplier = 1.82
-sky_rotation = Vector3(0, 1.1205, 0)
-ambient_light_source = 2
-ambient_light_color = Color(0.776471, 0.839216, 0.909804, 1)
-tonemap_mode = 2
-tonemap_exposure = 0.78
 tonemap_white = 2.09
 ssao_radius = 0.99
 ssao_intensity = 2.69
@@ -17,12 +11,14 @@ ssao_sharpness = 1.0
 ssil_radius = 6.49
 ssil_sharpness = 1.0
 sdfgi_use_occlusion = true
-sdfgi_read_sky_light = false
 glow_enabled = true
 glow_normalized = true
 glow_intensity = 0.71
 glow_strength = 0.74
 glow_blend_mode = 0
-volumetric_fog_density = 0.0412
-volumetric_fog_detail_spread = 4.43828
-volumetric_fog_ambient_inject = 0.77
+volumetric_fog_density = 0.024
+volumetric_fog_albedo = Color(0.223529, 0.321569, 0.321569, 1)
+volumetric_fog_emission = Color(0.0392157, 0.0862745, 0.27451, 1)
+adjustment_enabled = true
+adjustment_brightness = 1.92
+adjustment_saturation = 1.6

@@ -12,9 +12,9 @@ namespace MageQuest.StateMachines
         //State
         public bool CanChasePlayer { get; private set; }
         public bool CanAttackPlayer { get; private set; }
+        public Vector3 GuardPosition { get; private set; }
 
         //Refs
-
         public CharacterBody3D PlayerBody3D { get; private set; }
         public NavigationAgent3D Agent { get; private set; }
 
@@ -22,6 +22,7 @@ namespace MageQuest.StateMachines
         public override void _Ready()
         {
             base._Ready();
+            GuardPosition = Body3D.GlobalPosition;
         }
 
         public override void _PhysicsProcess(double delta)

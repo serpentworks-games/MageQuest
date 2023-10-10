@@ -5,6 +5,8 @@ namespace MageQuest.StateMachines.States
 {
     public class SlimeChaseState : EnemyBaseState
     {
+        Vector3 target;
+
         public SlimeChaseState(EnemyStateMachine stateMachine) : base(stateMachine)
         {
         }
@@ -16,6 +18,8 @@ namespace MageQuest.StateMachines.States
 
         public override void TickPhysicsState(float deltaTime)
         {
+            target = stateMachine.PlayerBody3D.GlobalPosition;
+
             if (IsInAttackRange())
             {
                 stateMachine.SwitchState(new SlimeAttackState(stateMachine));
@@ -23,11 +27,21 @@ namespace MageQuest.StateMachines.States
             }
             if (!IsInChaseRange())
             {
-                stateMachine.SwitchState(new SlimeIdleState(stateMachine));
-                return;
+                target = stateMachine.GuardPosition;
+                if ((target - stateMachine.Body3D.Position).Length() < 0.1)
+                {
+                    stateMachine.SwitchState(new SlimeIdleState(stateMachine));
+                    return;
+                }
             }
 
-            ApplyMovement(stateMachine.PlayerBody3D.Position, deltaTime);
+            SetMovementTarget(target);
+            ApplyNavAgentMovement();
+
+            Vector3 direction = (target - stateMachine.Body3D.Position).Normalized();
+            ApplyRotation(deltaTime, direction);
+            ApplyForces(direction, stateMachine.MoveSpeed);
+            stateMachine.Body3D.MoveAndSlide();
         }
 
         public override void TickState(float deltaTime)

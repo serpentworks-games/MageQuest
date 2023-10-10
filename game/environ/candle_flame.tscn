@@ -1,0 +1,49 @@
+[gd_scene load_steps=7 format=3 uid="uid://4n4b6c3poagn"]
+
+[ext_resource type="Texture2D" uid="uid://cg5ms0xqn48lc" path="res://addons/kenney_particle_pack/flame_05.png" id="1_81ojk"]
+[ext_resource type="Texture2D" uid="uid://h5pm1tdu2bx1" path="res://addons/kenney_particle_pack/flame_06.png" id="2_6j5cv"]
+[ext_resource type="Gradient" uid="uid://onfbl2bfv3yl" path="res://new_gradient.tres" id="3_6t15p"]
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_80nqo"]
+frames = 2
+speed_scale = 11.7
+frame_0/texture = ExtResource("1_81ojk")
+frame_1/texture = ExtResource("2_6j5cv")
+frame_1/duration = 1.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u2e81"]
+transparency = 1
+blend_mode = 1
+shading_mode = 0
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.921569, 0.74902, 0.27451, 1)
+albedo_texture = SubResource("AnimatedTexture_80nqo")
+albedo_texture_msdf = true
+billboard_mode = 3
+billboard_keep_scale = true
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="QuadMesh" id="QuadMesh_1ctgt"]
+material = SubResource("StandardMaterial3D_u2e81")
+
+[node name="CandleFlame" type="CPUParticles3D"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.00406874, 0.757767, 0)
+randomness = 0.35
+lifetime_randomness = 1.0
+local_coords = true
+draw_order = 1
+mesh = SubResource("QuadMesh_1ctgt")
+direction = Vector3(0, 1, 0)
+gravity = Vector3(0, 0.2, 0)
+angular_velocity_min = -16.18
+angular_velocity_max = 16.18
+damping_min = 0.562
+damping_max = 0.562
+scale_amount_min = 0.8
+scale_amount_max = 1.2
+color_ramp = ExtResource("3_6t15p")
+color_initial_ramp = ExtResource("3_6t15p")
+hue_variation_min = -0.1
+hue_variation_max = 0.1

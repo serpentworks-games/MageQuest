@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using System.Numerics;
 using Godot;
 using Vector3 = Godot.Vector3;
@@ -12,49 +13,24 @@ namespace MageQuest.StateMachines.States
         public EnemyBaseState(EnemyStateMachine stateMachine)
         {
             this.stateMachine = stateMachine;
+            stateMachine.Agent.VelocityComputed += OnVelocityComputed;
         }
 
         protected bool IsInChaseRange()
         {
             float distance = (stateMachine.PlayerBody3D.Position - stateMachine.Body3D.Position).LengthSquared();
-
             return distance <= stateMachine.ChaseDistance * stateMachine.ChaseDistance;
         }
 
         protected bool IsInAttackRange()
         {
             float distance = (stateMachine.PlayerBody3D.Position - stateMachine.Body3D.Position).LengthSquared();
-
             return distance <= stateMachine.AttackRange * stateMachine.AttackRange;
         }
 
         protected void ApplyForces(Vector3 motion, float moveSpeed)
         {
             stateMachine.Body3D.Velocity = (motion + stateMachine.ForceHandler.Movement) * moveSpeed;
-        }
-
-        protected void ApplyMovement(Vector3 targetPos, float deltaTime)
-        {
-            stateMachine.Agent.TargetPosition = targetPos;
-
-            if (stateMachine.Agent.TargetDesiredDistance < 1) { return; }
-
-            Vector3 direction = (targetPos - stateMachine.Body3D.Position).Normalized();
-            Vector3 velocity = CalculateVelocity(direction);
-            stateMachine.Body3D.Velocity = velocity;
-
-            ApplyRotation(deltaTime, direction);
-            ApplyForces(direction, stateMachine.MoveSpeed);
-            stateMachine.Body3D.MoveAndSlide();
-        }
-
-        protected Vector3 CalculateVelocity(Vector3 direction)
-        {
-            Vector3 velocity = stateMachine.Body3D.Velocity;
-
-            velocity.X = direction.X * stateMachine.MoveSpeed;
-            velocity.Z = direction.Z * stateMachine.MoveSpeed;
-            return velocity;
         }
 
         protected void ApplyRotation(double delta, Vector3 direction)
@@ -69,6 +45,29 @@ namespace MageQuest.StateMachines.States
             );
 
             stateMachine.CharacterMesh.Rotation = rotation;
+        }
+
+        protected void SetMovementTarget(Vector3 moveTarget)
+        {
+            stateMachine.Agent.TargetPosition = moveTarget;
+        }
+
+        protected void OnVelocityComputed(Vector3 safeVelocity)
+        {
+            stateMachine.Body3D.Velocity = safeVelocity;
+        }
+
+        protected void ApplyNavAgentMovement()
+        {
+            if (stateMachine.Agent.IsNavigationFinished()) { return; }
+
+            var nextPos = stateMachine.Agent.GetNextPathPosition();
+            var currentPos = stateMachine.Body3D.GlobalPosition;
+            var newVelocity = (nextPos - currentPos).Normalized() * stateMachine.MoveSpeed;
+            if(stateMachine.Agent.AvoidanceEnabled)
+                stateMachine.Agent.Velocity = newVelocity;
+            else
+                OnVelocityComputed(newVelocity);
         }
     }
 }
