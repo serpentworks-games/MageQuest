@@ -1,0 +1,36 @@
+[gd_scene load_steps=7 format=3 uid="uid://copgdprk10ah5"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gi4w5"]
+vertex_color_use_as_albedo = true
+albedo_color = Color(1, 0.0901961, 1, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_5e0vr"]
+material = SubResource("StandardMaterial3D_gi4w5")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jmoy4"]
+vertex_color_use_as_albedo = true
+albedo_color = Color(1, 0.0901961, 1, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_1dw6i"]
+material = SubResource("StandardMaterial3D_jmoy4")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_djupo"]
+vertex_color_use_as_albedo = true
+albedo_color = Color(1, 0.0901961, 1, 1)
+
+[sub_resource type="PrismMesh" id="PrismMesh_m53fp"]
+material = SubResource("StandardMaterial3D_djupo")
+
+[node name="PathPoint" type="MeshInstance3D"]
+layers = 2
+mesh = SubResource("SphereMesh_5e0vr")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0, 0, 0.537467)
+layers = 2
+mesh = SubResource("CylinderMesh_1dw6i")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MeshInstance3D"]
+transform = Transform3D(1.5, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.44679, 0)
+layers = 2
+mesh = SubResource("PrismMesh_m53fp")

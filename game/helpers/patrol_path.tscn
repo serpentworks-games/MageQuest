@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://umr05kkic3xg"]
+
+[ext_resource type="Script" path="res://scripts/combat/PatrolPath.cs" id="1_1dlld"]
+[ext_resource type="PackedScene" uid="uid://copgdprk10ah5" path="res://game/helpers/path_point.tscn" id="2_xjfke"]
+
+[node name="PatrolPath" type="Node3D"]
+script = ExtResource("1_1dlld")
+
+[node name="PathPoint" parent="." instance=ExtResource("2_xjfke")]
+skeleton = NodePath("../..")

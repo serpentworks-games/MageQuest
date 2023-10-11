@@ -1,5 +1,6 @@
 using System;
 using Godot;
+using MageQuest.Combat;
 using MageQuest.StateMachines.States;
 
 namespace MageQuest.StateMachines
@@ -13,12 +14,15 @@ namespace MageQuest.StateMachines
         [Export] public float SuspicionWaitTime { get; private set; }
 
         [ExportGroup("Patrol Variables")]
+        [Export] public PatrolPath PatrolPath { get; private set; }
         [Export] public float WaypointDwellTime { get; private set; }
+        [Export] public float WaypointTolerance { get; private set; }
 
         //State
         public bool CanChasePlayer { get; private set; }
         public bool CanAttackPlayer { get; private set; }
         public Vector3 GuardPosition { get; private set; }
+        public int CurrenWaypointIndex { get; set; }
 
         //Refs
         public CharacterBody3D PlayerBody3D { get; private set; }

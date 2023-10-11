@@ -22,3 +22,5 @@ res://scripts/statemachines/EnemyStateMachine.cs
 res://scripts/statemachines/PlayerStateMachine.cs
 res://scripts/statemachines/SlimeStateMachine.cs
 res://scripts/statemachines/StateMachine.cs
+res://scripts/combat/PatrolPath.cs
+res://game/helpers/path_point.tscn

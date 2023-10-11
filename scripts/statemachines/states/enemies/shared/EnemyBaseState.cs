@@ -68,5 +68,16 @@ namespace MageQuest.StateMachines.States
             else
                 OnVelocityComputed(newVelocity);
         }
+
+        protected void Move(float deltaTime, Vector3 target)
+        {
+            SetMovementTarget(target);
+            ApplyNavAgentMovement();
+
+            Vector3 direction = (target - stateMachine.Body3D.Position).Normalized();
+            ApplyRotation(deltaTime, direction);
+            ApplyForces(direction, stateMachine.MoveSpeed);
+            stateMachine.Body3D.MoveAndSlide();
+        }
     }
 }

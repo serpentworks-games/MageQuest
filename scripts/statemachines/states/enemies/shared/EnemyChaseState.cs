@@ -35,22 +35,23 @@ namespace MageQuest.StateMachines.States
                     stateMachine.AnimationTree.Set(StringRefs.AnimTreeVelocityBlendParam, 0f);
                     return;
                 }
-                stateMachine.AnimationTree.Set(StringRefs.AnimTreeVelocityBlendParam, 1f);
-                target = stateMachine.GuardPosition;
-                if ((target - stateMachine.Body3D.Position).Length() < 0.1)
+                if(stateMachine.PatrolPath != null)
                 {
-                    stateMachine.SwitchState(new EnemyIdleState(stateMachine));
-                    return;
+                    stateMachine.SwitchState(new EnemyPatrolState(stateMachine));
+                }
+                else
+                {
+                    stateMachine.AnimationTree.Set(StringRefs.AnimTreeVelocityBlendParam, 1f);
+                    target = stateMachine.GuardPosition;
+                    if ((target - stateMachine.Body3D.Position).Length() < 0.1)
+                    {
+                        stateMachine.SwitchState(new EnemyIdleState(stateMachine));
+                        return;
+                    }
                 }
             }
 
-            SetMovementTarget(target);
-            ApplyNavAgentMovement();
-
-            Vector3 direction = (target - stateMachine.Body3D.Position).Normalized();
-            ApplyRotation(deltaTime, direction);
-            ApplyForces(direction, stateMachine.MoveSpeed);
-            stateMachine.Body3D.MoveAndSlide();
+            Move(deltaTime, target);
         }
 
         public override void TickState(float deltaTime)

@@ -1,5 +1,8 @@
-OmniLight3D
+Node3D
 MeshInstance3D
+MultiMeshInstance3D
+RayCast3D
+OmniLight3D
 Label3D
 Control
 Label
@@ -7,7 +10,6 @@ Panel
 Timer
 PathFollow3D
 Path3D
-Node3D
 NavigationObstacle3D
 Node
 NavigationRegion3D
