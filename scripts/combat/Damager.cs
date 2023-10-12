@@ -9,19 +9,19 @@ namespace MageQuest.Combat
     {
         [Export] int areaDamage;
 
-        int damage;
+        public int damage;
         public override void _Ready()
         {
             damage = areaDamage;
             BodyEntered += OnBodyEntered;
         }
 
-        public void SetDamage(int damage)
+        public virtual void SetDamage(int damage)
         {
             this.damage = damage;
         }
 
-        private void OnBodyEntered(Node3D body)
+        public virtual void OnBodyEntered(Node3D body)
         {
             CharacterStats charStats = (CharacterStats)body.GetNode("CharacterStats");
             if (charStats != null)

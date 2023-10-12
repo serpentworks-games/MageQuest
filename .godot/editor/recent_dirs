@@ -1,3 +1,4 @@
+res://game
 res://game/helpers
 res://ui
 res://scripts
@@ -9,5 +10,4 @@ res://addons
 D:/GameDev/_Tools/FBX2glTF-windows-x86_64/FBX2glTF-windows-x86_64
 res://game/characters
 res://game_scenes
-res://game
 res://addons/kaykit_dungeon_remastered/Assets/texture

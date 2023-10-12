@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using Godot;
 
 namespace MageQuest.Combat
@@ -6,7 +7,7 @@ namespace MageQuest.Combat
     {
         [Export] public Damager DamageArea { get; private set; }
         [Export] public Node3D ProjectileStartLocation { get; private set; }
-        [Export] public Node3D Projectile { get; private set; }
+        [Export] public PackedScene ProjectileScene { get; private set; }
 
         public int WeaponDamage { get; private set; }
 
@@ -29,7 +30,12 @@ namespace MageQuest.Combat
 
         public void InstantiateProjectile()
         {
-
+            Debug.Print("Pew pew!");
+            Projectile projectile = ProjectileScene.Instantiate<Projectile>();
+            
+            projectile.SetupProjectile(ProjectileStartLocation.Position);
+            GetTree().CurrentScene.AddChild(projectile);
+            projectile.Transform = ProjectileStartLocation.GlobalTransform;
         }
     }
 }

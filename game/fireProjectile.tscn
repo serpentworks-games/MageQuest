@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://c7nqeh7nlox2"]
+
+[ext_resource type="PackedScene" uid="uid://byaee6t2vqw7d" path="res://game/projectile.tscn" id="1_aqvol"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a0k2s"]
+vertex_color_use_as_albedo = true
+albedo_color = Color(1, 0.75, 0, 1)
+emission_enabled = true
+emission = Color(1, 0.615686, 0, 1)
+rim_enabled = true
+rim = 0.41
+
+[node name="Projectile" instance=ExtResource("1_aqvol")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+speed = 10.0
+maxLifetime = 5.0
+
+[node name="MeshInstance3D" parent="." index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_a0k2s")
+
+[node name="Damager" parent="." index="1"]
+areaDamage = 10
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." index="2"]
+light_color = Color(1, 0.615686, 0, 1)

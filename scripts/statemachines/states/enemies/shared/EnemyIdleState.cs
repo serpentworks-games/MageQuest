@@ -23,6 +23,11 @@ namespace MageQuest.StateMachines.States
 
         public override void TickState(float deltaTime)
         {
+            if(stateMachine.PatrolPath != null)
+            {
+                stateMachine.SwitchState(new EnemyPatrolState(stateMachine));
+                return;
+            }
             if (IsInAttackRange())
             {
                 stateMachine.SwitchState(new EnemyAttackState(stateMachine));

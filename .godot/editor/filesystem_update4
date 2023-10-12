@@ -1,3 +1,4 @@
+res://game/projectile.tscn
 res://addons/kaykit_dungeon_remastered/Assets/texture/baseMat.tres
 res://mesh_libraries/floorTiles.tres
 res://game_scenes/testSceneData/test_scene_environ.tres
@@ -8,12 +9,14 @@ res://particle_things/smokeGradient.tres
 res://addons/quaternius simple nature pack/materials/leaves.tres
 res://addons/quaternius simple nature pack/meshes/bush_3.res
 res://game_scenes/test_scene.tscn
-res://game/characters/slimeMonster.tscn
 res://game/characters/player_updated.tscn
-res://ui/main_hud.tscn
+res://game/characters/slimeMonster.tscn
+res://game/fireProjectile.tscn
 res://scripts/combat/AttackData.cs
 res://scripts/combat/CharacterStats.cs
 res://scripts/combat/Damager.cs
+res://scripts/combat/PatrolPath.cs
+res://scripts/combat/Projectile.cs
 res://scripts/combat/WeaponHandler.cs
 res://scripts/core/CameraRig.cs
 res://scripts/core/ForceHandler.cs
@@ -22,5 +25,5 @@ res://scripts/statemachines/EnemyStateMachine.cs
 res://scripts/statemachines/PlayerStateMachine.cs
 res://scripts/statemachines/SlimeStateMachine.cs
 res://scripts/statemachines/StateMachine.cs
-res://scripts/combat/PatrolPath.cs
-res://game/helpers/path_point.tscn
+res://scripts/statemachines/TestStateMachine.cs
+res://scripts/combat/ProjectileDamager.cs

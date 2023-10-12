@@ -7,4 +7,5 @@ resource_name = "AttackData"
 script = ExtResource("1_m4tyu")
 TriggerRequestParamPath = ""
 TriggerActiveParamPath = ""
-AttackDamage = 0.0
+AttackDamage = 0
+AttackSpeed = 0.0

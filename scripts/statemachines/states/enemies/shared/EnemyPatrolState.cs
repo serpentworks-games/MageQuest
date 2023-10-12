@@ -1,12 +1,16 @@
 using System;
+using System.Diagnostics;
+using System.Runtime.InteropServices;
 using Godot;
+using MageQuest.Combat;
+using MageQuest.Utils;
 
 namespace MageQuest.StateMachines.States
 {
     class EnemyPatrolState : EnemyBaseState
     {
-        float timeSinceArrivedAtWaypoint = Mathf.Inf;
-        int currentIndex;
+        float timeSinceArrivedAtWaypoint;
+        int currentIndex = 0;
 
         public EnemyPatrolState(EnemyStateMachine stateMachine) : base(stateMachine)
         {
@@ -14,7 +18,7 @@ namespace MageQuest.StateMachines.States
 
         public override void EnterState()
         {
-
+            stateMachine.AnimationTree.Set(StringRefs.AnimTreeVelocityBlendParam, 1f);
         }
 
         public override void TickState(float deltaTime)
@@ -24,8 +28,6 @@ namespace MageQuest.StateMachines.States
 
         public override void TickPhysicsState(float deltaTime)
         {
-            timeSinceArrivedAtWaypoint += deltaTime;
-
             if (IsInAttackRange())
             {
                 stateMachine.SwitchState(new EnemyAttackState(stateMachine));
@@ -45,14 +47,17 @@ namespace MageQuest.StateMachines.States
                     timeSinceArrivedAtWaypoint = 0f;
                     AdvanceWaypoints();
                 }
+
                 nextPos = GetCurrentWayPoint();
             }
-
-            if (timeSinceArrivedAtWaypoint > stateMachine.WaypointDwellTime)
+            timeSinceArrivedAtWaypoint += deltaTime;
+            if (timeSinceArrivedAtWaypoint < stateMachine.WaypointDwellTime)
             {
-                Move(deltaTime, nextPos);
+                stateMachine.AnimationTree.Set(StringRefs.AnimTreeVelocityBlendParam, 0f);
+                return;
             }
-
+            stateMachine.AnimationTree.Set(StringRefs.AnimTreeVelocityBlendParam, 1f);
+            Move(deltaTime, nextPos);
         }
 
         public override void ExitState()
@@ -68,12 +73,12 @@ namespace MageQuest.StateMachines.States
 
         private void AdvanceWaypoints()
         {
-
+            currentIndex = stateMachine.PatrolPath.GetNextIndex(currentIndex);
         }
 
         private Vector3 GetCurrentWayPoint()
         {
-            return Vector3.Zero;
+            return stateMachine.PatrolPath.GetWaypointPos(currentIndex);
         }
 
 
