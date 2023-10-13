@@ -7,6 +7,8 @@ namespace MageQuest.StateMachines
     {
         //Public Configs
 
+        //State
+        public bool CanInteract { get; set; }
 
         //Refs
         public InputReader InputReader { get; private set; }
@@ -30,11 +32,6 @@ namespace MageQuest.StateMachines
             base._PhysicsProcess(delta);
         }
 
-        private void HandleImpacts()
-        {
-            SwitchState(new PlayerImpactState(this));
-        }
-
         public override void InitRefs()
         {
             InputReader = (InputReader)GetNode("../InputReader");
@@ -43,5 +40,11 @@ namespace MageQuest.StateMachines
             base.InitRefs();
 
         }
+
+        private void HandleImpacts()
+        {
+            SwitchState(new PlayerImpactState(this));
+        }
+
     }
 }

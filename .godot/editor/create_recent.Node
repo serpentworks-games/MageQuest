@@ -1,11 +1,12 @@
-Area3D
+Node3D
+CollisionShape3D
 CharacterBody3D
+StaticBody3D
+MeshInstance3D
+Area3D
 RigidBody3D
 OmniLight3D
 CPUParticles3D
-MeshInstance3D
-CollisionShape3D
-Node3D
 MultiMeshInstance3D
 RayCast3D
 Label3D
@@ -19,7 +20,6 @@ NavigationObstacle3D
 Node
 NavigationRegion3D
 SpotLight3D
-StaticBody3D
 GPUParticles3D
 NavigationAgent3D
 AnimationTree
@@ -28,4 +28,3 @@ Camera3D
 BoneAttachment3D
 GridMap
 LightmapProbe
-VoxelGI
