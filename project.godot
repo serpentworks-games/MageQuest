@@ -25,10 +25,6 @@ window/size/always_on_top.editor=false
 
 project/assembly_name="MageQuest"
 
-[editor_plugins]
-
-enabled=PackedStringArray()
-
 [input]
 
 moveRight={
@@ -75,6 +71,7 @@ shoot={
 3d_physics/layer_2="Enemy"
 3d_navigation/layer_2="NotWalkable"
 3d_physics/layer_3="Environ"
+3d_physics/layer_4="Interactable"
 avoidance/layer_1="NotWalkable"
 
 [rendering]
