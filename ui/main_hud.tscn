@@ -1,12 +1,17 @@
-[gd_scene format=3 uid="uid://bm6sirnfah4a4"]
+[gd_scene load_steps=2 format=3 uid="uid://bm6sirnfah4a4"]
 
-[node name="MainHUD" type="Control"]
+[ext_resource type="Script" path="res://scripts/DebugUI.cs" id="1_joprb"]
+
+[node name="MainHUD" type="Control" node_paths=PackedStringArray("goldValueLabel", "keyValueLabel")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_joprb")
+goldValueLabel = NodePath("Gold and Keys/VerticalLayout/Gold/GoldValueLabel")
+keyValueLabel = NodePath("Gold and Keys/VerticalLayout/BasicKeys/BasicKeysValueLabel")
 
 [node name="Controls" type="Panel" parent="."]
 layout_mode = 1
@@ -45,15 +50,21 @@ uppercase = true
 layout_mode = 0
 offset_left = 10.0
 offset_top = 10.0
-offset_right = 186.0
-offset_bottom = 114.0
+offset_right = 132.0
+offset_bottom = 76.0
+metadata/_edit_group_ = true
 
 [node name="VerticalLayout" type="VBoxContainer" parent="Gold and Keys"]
 layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
 offset_left = 10.0
 offset_top = 10.0
-offset_right = 164.0
-offset_bottom = 93.0
+offset_right = -10.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
 alignment = 1
 
 [node name="Gold" type="HBoxContainer" parent="Gold and Keys/VerticalLayout"]
@@ -93,6 +104,7 @@ fit_content = true
 scroll_active = false
 
 [node name="BossKeys" type="HBoxContainer" parent="Gold and Keys/VerticalLayout"]
+visible = false
 layout_mode = 2
 alignment = 1
 

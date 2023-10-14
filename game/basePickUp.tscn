@@ -1,0 +1,74 @@
+[gd_scene load_steps=11 format=3 uid="uid://djmip2b4paupr"]
+
+[ext_resource type="Script" path="res://scripts/inventory_system/PickUp.cs" id="1_clonv"]
+[ext_resource type="Texture2D" uid="uid://ccw4n0pcpbrx8" path="res://addons/kenney_particle_pack/star_02.png" id="2_t677m"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_m3v0f"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_clgim"]
+transparency = 1
+albedo_color = Color(1, 0.294118, 0.443137, 0.333333)
+
+[sub_resource type="SphereMesh" id="SphereMesh_o7mu0"]
+material = SubResource("StandardMaterial3D_clgim")
+
+[sub_resource type="Curve" id="Curve_cnhqe"]
+max_value = 100.0
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 100), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_o88ov"]
+curve = SubResource("Curve_cnhqe")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_q3dpl"]
+lifetime_randomness = 0.11
+emission_shape = 6
+emission_ring_axis = Vector3(0, 0, 1)
+emission_ring_height = 1.0
+emission_ring_radius = 2.0
+emission_ring_inner_radius = 0.0
+direction = Vector3(0, 1, 0)
+spread = 70.71
+gravity = Vector3(0, 1, 0)
+damping_curve = SubResource("CurveTexture_o88ov")
+attractor_interaction_enabled = false
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xfroo"]
+transparency = 1
+blend_mode = 1
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.905882, 0.690196, 0.643137, 1)
+albedo_texture = ExtResource("2_t677m")
+albedo_texture_msdf = true
+emission_enabled = true
+emission = Color(1, 0.713726, 0.141176, 1)
+emission_energy_multiplier = 2.0
+billboard_mode = 3
+billboard_keep_scale = true
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="QuadMesh" id="QuadMesh_16f6o"]
+material = SubResource("StandardMaterial3D_xfroo")
+
+[node name="PickUp" type="Area3D"]
+script = ExtResource("1_clonv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
+shape = SubResource("SphereShape3D_m3v0f")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CollisionShape3D"]
+layers = 2
+mesh = SubResource("SphereMesh_o7mu0")
+skeleton = NodePath("../..")
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="."]
+visible = false
+lifetime = 1.5
+speed_scale = 1.5
+local_coords = true
+draw_order = 1
+process_material = SubResource("ParticleProcessMaterial_q3dpl")
+draw_pass_1 = SubResource("QuadMesh_16f6o")
