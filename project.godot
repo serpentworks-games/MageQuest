@@ -19,11 +19,16 @@ config/icon="res://icon.svg"
 
 window/size/viewport_width=1600
 window/size/viewport_height=900
+window/vsync/vsync_mode=0
 window/size/always_on_top.editor=false
 
 [dotnet]
 
 project/assembly_name="MageQuest"
+
+[editor]
+
+movie_writer/movie_file="D:/GameDev/GodotProjects/MVP.avi"
 
 [input]
 

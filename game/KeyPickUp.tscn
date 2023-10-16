@@ -1,0 +1,59 @@
+[gd_scene load_steps=8 format=3 uid="uid://brbdaavsro7a2"]
+
+[ext_resource type="PackedScene" uid="uid://djmip2b4paupr" path="res://game/basePickUp.tscn" id="1_f5hid"]
+[ext_resource type="PackedScene" uid="uid://dtrn6haljopai" path="res://addons/kaykit_dungeon_remastered/Assets/gltf/misc/key.gltf.glb" id="2_qqnf8"]
+[ext_resource type="Texture2D" uid="uid://xmgemu5e52k7" path="res://addons/kaykit_dungeon_remastered/Assets/texture/dungeon_texture.png" id="3_5igfq"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_120nr"]
+shading_mode = 0
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.678431, 0.678431, 0.678431, 1)
+albedo_texture = ExtResource("3_5igfq")
+
+[sub_resource type="Animation" id="Animation_r38cu"]
+resource_name = "KeySpin"
+length = 4.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("key:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2, 4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0.5, 0), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_s4xti"]
+_data = {
+"KeySpin": SubResource("Animation_r38cu")
+}
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_4upw4"]
+animation = &"KeySpin"
+
+[node name="KeyPickUp" instance=ExtResource("1_f5hid")]
+ItemType = 1
+amountToAdd = 1
+
+[node name="key_gltf" parent="." index="1" instance=ExtResource("2_qqnf8")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -0.42423, 0.748468, 0)
+
+[node name="key" parent="key_gltf" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.397892, 0)
+surface_material_override/0 = SubResource("StandardMaterial3D_120nr")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="key_gltf" index="1"]
+libraries = {
+"": SubResource("AnimationLibrary_s4xti")
+}
+
+[node name="AnimationTree" type="AnimationTree" parent="key_gltf" index="2"]
+tree_root = SubResource("AnimationNodeAnimation_4upw4")
+anim_player = NodePath("../AnimationPlayer")
+active = true
+
+[editable path="key_gltf"]

@@ -1,14 +1,19 @@
-[gd_scene format=3 uid="uid://bm6sirnfah4a4"]
+[gd_scene load_steps=2 format=3 uid="uid://bm6sirnfah4a4"]
 
-[node name="MainHUD" type="Control"]
+[ext_resource type="Script" path="res://scripts/DebugUI.cs" id="1_joprb"]
+
+[node name="MainHUD" type="Control" node_paths=PackedStringArray("goldValueLabel", "keyValueLabel")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_joprb")
+goldValueLabel = NodePath("Gold and Keys/VerticalLayout/Gold/GoldValueLabel")
+keyValueLabel = NodePath("Gold and Keys/VerticalLayout/BasicKeys/BasicKeysValueLabel")
 
-[node name="Panel" type="Panel" parent="."]
+[node name="Controls" type="Panel" parent="."]
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
@@ -20,7 +25,7 @@ offset_bottom = -10.0
 grow_vertical = 0
 metadata/_edit_group_ = true
 
-[node name="Label" type="Label" parent="Panel"]
+[node name="Label" type="Label" parent="Controls"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -40,3 +45,80 @@ Ranged: RMB
 Jump: Space"
 vertical_alignment = 1
 uppercase = true
+
+[node name="Gold and Keys" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 132.0
+offset_bottom = 76.0
+metadata/_edit_group_ = true
+
+[node name="VerticalLayout" type="VBoxContainer" parent="Gold and Keys"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Gold" type="HBoxContainer" parent="Gold and Keys/VerticalLayout"]
+layout_mode = 2
+size_flags_vertical = 4
+alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Gold and Keys/VerticalLayout/Gold"]
+custom_minimum_size = Vector2(50, 25)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Gold:"
+scroll_active = false
+
+[node name="GoldValueLabel" type="RichTextLabel" parent="Gold and Keys/VerticalLayout/Gold"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+text = "99999"
+fit_content = true
+scroll_active = false
+
+[node name="BasicKeys" type="HBoxContainer" parent="Gold and Keys/VerticalLayout"]
+layout_mode = 2
+alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Gold and Keys/VerticalLayout/BasicKeys"]
+custom_minimum_size = Vector2(50, 25)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Keys:"
+
+[node name="BasicKeysValueLabel" type="RichTextLabel" parent="Gold and Keys/VerticalLayout/BasicKeys"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+text = "99999"
+fit_content = true
+scroll_active = false
+
+[node name="BossKeys" type="HBoxContainer" parent="Gold and Keys/VerticalLayout"]
+visible = false
+layout_mode = 2
+alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Gold and Keys/VerticalLayout/BossKeys"]
+custom_minimum_size = Vector2(100, 25)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "BossKeys:"
+fit_content = true
+scroll_active = false
+
+[node name="BossKeysValueLabel" type="RichTextLabel" parent="Gold and Keys/VerticalLayout/BossKeys"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+text = "99999"
+fit_content = true
+scroll_active = false
