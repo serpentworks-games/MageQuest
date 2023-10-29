@@ -1,4 +1,4 @@
-res://game_scenes/test_scene.tscn
+res://addons/dialogue_manager/example_balloon/example_balloon.tscn
 res://addons/kaykit_dungeon_remastered/Assets/texture/baseMat.tres
 res://mesh_libraries/floorTiles.tres
 res://game_scenes/testSceneData/test_scene_environ.tres
@@ -8,18 +8,8 @@ res://particle_things/flameGradient.tres
 res://particle_things/smokeGradient.tres
 res://addons/quaternius simple nature pack/materials/leaves.tres
 res://addons/quaternius simple nature pack/meshes/bush_3.res
-res://game/characters/player_updated.tscn
-res://game/characters/slimeMonster.tscn
-res://addons/interaction_system/InteractionSystem.cs
-res://addons/interaction_system/systems/interaction/interactable/Interactable2D.cs
-res://addons/interaction_system/systems/interaction/interactable/Interactable3D.cs
-res://addons/interaction_system/systems/interaction/interactable/InteractableProp3D.cs
-res://addons/interaction_system/systems/interaction/interactor/CharacterInteractor2D.cs
-res://addons/interaction_system/systems/interaction/interactor/CharacterInteractor3D.cs
-res://addons/interaction_system/systems/interaction/interactor/Interactor2D.cs
-res://addons/interaction_system/systems/interaction/interactor/Interactor3D.cs
-res://examples/interactables/3D/interactable_box/InteractableBox.cs
-res://examples/player/3D/Player.cs
+res://game_scenes/test_scene.tscn
+res://addons/dialogue_manager/DialogueManager.cs
 res://scripts/combat/AttackData.cs
 res://scripts/combat/CharacterStats.cs
 res://scripts/combat/Damager.cs
@@ -30,15 +20,24 @@ res://scripts/combat/WeaponHandler.cs
 res://scripts/core/CameraRig.cs
 res://scripts/core/ForceHandler.cs
 res://scripts/core/InputReader.cs
+res://scripts/DebugUI.cs
+res://scripts/interaction_system/actions/AddToInventory.cs
+res://scripts/interaction_system/actions/CheckInventory.cs
 res://scripts/interaction_system/actions/NodeRotator.cs
 res://scripts/interaction_system/actions/SimpleNodeTransformer.cs
+res://scripts/interaction_system/actions/StringPrinter.cs
 res://scripts/interaction_system/actions/ToggleNode.cs
+res://scripts/interaction_system/actions/TriggerNodeAnimation.cs
 res://scripts/interaction_system/InteractArea.cs
 res://scripts/interaction_system/InteractionAction.cs
+res://scripts/inventory_system/Inventory.cs
+res://scripts/inventory_system/PickUp.cs
 res://scripts/statemachines/EnemyStateMachine.cs
 res://scripts/statemachines/PlayerStateMachine.cs
 res://scripts/statemachines/SlimeStateMachine.cs
 res://scripts/statemachines/StateMachine.cs
 res://scripts/statemachines/TestStateMachine.cs
-res://scripts/interaction_system/actions/TriggerNodeAnimation.cs
-res://game/characters/mushnub.tscn
+res://scripts/utils/AudioPitchRandomizer.cs
+res://Test.cs
+res://addons/dialogue_manager/test_scene.tscn
+res://addons/dialogue_manager/components/settings.gd

@@ -1,0 +1,22 @@
+~ look_at_thing
+The object before you is something, ain't it?
+Me: What...[wait=1.5] what do we even call this?
+Me: It's just so...[wait=1.5] bad. Or maybe good?
+	Honestly I'm not sure.
+- Touch it => you_touched_it
+- Ew, don't touch it => you_didnt_touch_it
+- Investigate it further
+	Me: I really don't understand this thing. => continue_on
+
+~ you_touched_it
+You touched it. Why would you touch it? It clearly doesn't want to be touched! 
+=> continue_on
+
+~ you_didnt_touch_it
+Look at you respecting this thing's personal space! I'm very proud of you. 
+=> continue_on
+
+~ continue_on
+Well, it's not revealing anything about itself. Might as well move on.
+
+=> END

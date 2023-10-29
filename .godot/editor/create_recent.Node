@@ -1,3 +1,12 @@
+Panel
+DialogueLabel
+RichTextLabel
+NinePatchRect
+Node
+AudioStreamPlayer
+AudioStreamPlayer2D
+Control
+Timer
 Node3D
 CollisionShape3D
 CharacterBody3D
@@ -10,14 +19,10 @@ CPUParticles3D
 MultiMeshInstance3D
 RayCast3D
 Label3D
-Control
 Label
-Panel
-Timer
 PathFollow3D
 Path3D
 NavigationObstacle3D
-Node
 NavigationRegion3D
 SpotLight3D
 GPUParticles3D
@@ -25,6 +30,3 @@ NavigationAgent3D
 AnimationTree
 SpringArm3D
 Camera3D
-BoneAttachment3D
-GridMap
-LightmapProbe
